@@ -35,7 +35,7 @@ users.sls file in your pillar tree with this format:
 
 ```yaml
 users:
-  - user
+  - user:
     username: tdurden
     fullname: Tyler Durden
     password: [Hash - SHA-512 for Ubuntu]
