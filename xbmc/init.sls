@@ -1,0 +1,26 @@
+xbmc_repository:
+  pkgrepo.managed:
+    - ppa: team-xbmc/ppa
+    - require_in:
+      - pkg.installed: xbmc
+
+xbmc:
+  pkg.installed:
+    - require:
+      - pkgrepo.managed: xbmc_repository
+
+{% for user in pillar.get('users', []) %}
+/home/{{ user.username }}/.xbmc/userdata/guisettings.xml:
+  file.managed:
+    - source: salt://xbmc/guisettings.xml
+    - mode: 644
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - template: jinja
+    - context:
+        derp_username: {{ user.derp_username }}
+        derp_password: {{ user.derp_password }}
+        username: {{ user.username }}
+    - require:
+      - pkg.installed: xbmc
+{% endfor %}

@@ -1,22 +1,24 @@
 vim-deps:
-   pkg.installed:
-     - names:
-       - exuberant-ctags
-     - require_in:
-       - pkg: vim
+  pkg.installed:
+    - names:
+      - exuberant-ctags
+    - require_in:
+      - pkg: vim
 
+{% for user in pillar.get('users', []) %}
 vim-vundle:
-   git.latest:
-     - name: git://github.com/gmarik/vundle.git
-     - target: /home/rspectre/.vim/bundle/vundle
-     - submodules: true
-     - runas: rspectre
+  git.latest:
+    - name: git://github.com/gmarik/vundle.git
+    - target: /home/{{ user.username }}/.vim/bundle/vundle
+    - submodules: true
+    - runas: {{ user.username }} 
+{% endfor %}
 
 vim:
-    require:
-      - pkg: vim-deps
-    pkg:
-      - installed
+  require:
+    - pkg: vim-deps
+  pkg:
+    - installed
     
 /etc/vimrc:
   file.managed:
@@ -25,9 +27,11 @@ vim:
     - user: root
     - group: root
 
-/home/rspectre/.vimrc:
+{% for user in pillar.get('users', []) %}
+/home/{{ user.username }}/.vimrc:
   file.managed:
     - source: salt://vim/vimrc
     - mode: 644
-    - user: rspectre
-    - group: rspectre
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+{% endfor %}

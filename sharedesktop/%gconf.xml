@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+    <entry name="vnc_password" mtime="1376253372" type="string">
+        <stringvalue>{{ vnc_hash }}</stringvalue>
+    </entry>
+    <entry name="authentication_methods" mtime="1376253367" type="list" ltype="string">
+        <li type="string">
+            <stringvalue>vnc</stringvalue>
+        </li>
+    </entry>
+    <entry name="enabled" mtime="1376253398" type="bool" value="false"/>
+</gconf>

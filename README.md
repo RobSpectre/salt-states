@@ -50,3 +50,7 @@ users:
 - Created by [Rob Spectre](http://www.brooklynhacker.com)
 - [MIT License](http://opensource.org/licenses/MIT)
 - Lovingly crafted in Brooklyn, NY
+
+[![githalytics.com
+alpha](https://cruel-carlota.pagodabox.com/6a7dd0cd013e97f8551c4d7bb076e372
+"githalytics.com")](http://githalytics.com/RobSpectre/salt-states)

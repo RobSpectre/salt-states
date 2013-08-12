@@ -1,0 +1,2559 @@
+<settings>
+    <mymusic>
+        <playlist>
+            <repeat>false</repeat>
+            <shuffle>false</shuffle>
+        </playlist>
+        <needsupdate>27</needsupdate>
+        <startwindow>10501</startwindow>
+        <songinfoinvis>true</songinfoinvis>
+        <songthumbinvis>false</songthumbinvis>
+        <defaultlibview pathversion="1"></defaultlibview>
+    </mymusic>
+    <myvideos>
+        <startwindow>10025</startwindow>
+        <stackvideos>false</stackvideos>
+        <watchmodemovies>0</watchmodemovies>
+        <watchmodetvshows>0</watchmodetvshows>
+        <watchmodemusicvideos>0</watchmodemusicvideos>
+        <needsupdate>0</needsupdate>
+        <flatten>true</flatten>
+        <playlist>
+            <repeat>false</repeat>
+            <shuffle>false</shuffle>
+        </playlist>
+        <extractflags>true</extractflags>
+        <extractthumb>true</extractthumb>
+        <replacelabels>true</replacelabels>
+        <selectaction>1</selectaction>
+    </myvideos>
+    <viewstates>
+        <musicnavartists>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </musicnavartists>
+        <musicnavalbums>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </musicnavalbums>
+        <musicnavsongs>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </musicnavsongs>
+        <musiclastfm>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </musiclastfm>
+        <videonavactors>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavactors>
+        <videonavyears>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavyears>
+        <videonavgenres>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavgenres>
+        <videonavtitles>
+            <viewmode>524789</viewmode>
+            <sortmethod>25</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavtitles>
+        <videonavepisodes>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavepisodes>
+        <videonavseasons>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavseasons>
+        <videonavtvshows>
+            <viewmode>66041</viewmode>
+            <sortmethod>25</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavtvshows>
+        <videonavmusicvideos>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </videonavmusicvideos>
+        <programs>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </programs>
+        <pictures>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </pictures>
+        <videofiles>
+            <viewmode>65586</viewmode>
+            <sortmethod>2</sortmethod>
+            <sortorder>1</sortorder>
+        </videofiles>
+        <musicfiles>
+            <viewmode>65536</viewmode>
+            <sortmethod>1</sortmethod>
+            <sortorder>1</sortorder>
+        </musicfiles>
+    </viewstates>
+    <general>
+        <systemtotaluptime>89225</systemtotaluptime>
+        <addonautoupdate>true</addonautoupdate>
+        <addonnotifications>true</addonnotifications>
+        <addonforeignfilter>false</addonforeignfilter>
+    </general>
+    <defaultvideosettings>
+        <deinterlacemode>1</deinterlacemode>
+        <interlacemethod>1</interlacemethod>
+        <scalingmethod>1</scalingmethod>
+        <noisereduction>0.000000</noisereduction>
+        <postprocess>false</postprocess>
+        <sharpness>0.000000</sharpness>
+        <viewmode>0</viewmode>
+        <zoomamount>1.000000</zoomamount>
+        <pixelratio>1.000000</pixelratio>
+        <verticalshift>0.000000</verticalshift>
+        <volumeamplification>0.000000</volumeamplification>
+        <outputtoallspeakers>false</outputtoallspeakers>
+        <showsubtitles>false</showsubtitles>
+        <brightness>50.000000</brightness>
+        <contrast>50.000000</contrast>
+        <gamma>20.000000</gamma>
+        <audiodelay>0.000000</audiodelay>
+        <subtitledelay>0.000000</subtitledelay>
+        <autocrop>false</autocrop>
+        <nonlinstretch>false</nonlinstretch>
+    </defaultvideosettings>
+    <audio>
+        <mute>false</mute>
+        <fvolumelevel>1.000000</fvolumelevel>
+    </audio>
+    <resolutions>
+        <resolution>
+            <description>Windowed</description>
+            <subtitles>463</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>0.000000</refreshrate>
+            <output></output>
+            <xrandrid></xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1920x1080 @ 54.00 - Full Screen</description>
+            <subtitles>1042</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>54.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x12f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1920</right>
+                <bottom>1080</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1920x1080 @ 50.00Hz</description>
+            <subtitles>1025</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>50.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x12b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1920</right>
+                <bottom>1080</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1920x1080 @ 51.00Hz</description>
+            <subtitles>1025</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>51.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x12c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1920</right>
+                <bottom>1080</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1920x1080 @ 52.00Hz</description>
+            <subtitles>1025</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>52.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x12d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1920</right>
+                <bottom>1080</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1920x1080 @ 53.00Hz</description>
+            <subtitles>1025</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>53.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x12e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1920</right>
+                <bottom>1080</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1920x1080 @ 54.00Hz</description>
+            <subtitles>1025</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>54.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x12f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1920</right>
+                <bottom>1080</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1680x1050 @ 55.00Hz</description>
+            <subtitles>997</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>55.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x130</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1680</right>
+                <bottom>1050</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1680x1050 @ 56.00Hz</description>
+            <subtitles>997</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>56.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x131</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1680</right>
+                <bottom>1050</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1600x1024 @ 57.00Hz</description>
+            <subtitles>972</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>57.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x132</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1600</right>
+                <bottom>1024</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1440x900 @ 58.00Hz</description>
+            <subtitles>854</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>58.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x133</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1440</right>
+                <bottom>900</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1440x480 @ 59.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>59.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x134</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1440</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1400x1050 @ 60.00Hz</description>
+            <subtitles>997</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>60.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x135</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1400</right>
+                <bottom>1050</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1400x1050 @ 61.00Hz</description>
+            <subtitles>997</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>61.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x136</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1400</right>
+                <bottom>1050</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1360x768 @ 62.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>62.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x137</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1360</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1360x768 @ 63.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>63.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x138</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1360</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1280x1024 @ 64.00Hz</description>
+            <subtitles>972</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>64.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x139</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>1024</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1280x1024 @ 65.00Hz</description>
+            <subtitles>972</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>65.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x13a</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>1024</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1280x960 @ 66.00Hz</description>
+            <subtitles>911</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>66.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x13b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>960</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1280x960 @ 67.00Hz</description>
+            <subtitles>911</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>67.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x13c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>960</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1280x720 @ 68.00Hz</description>
+            <subtitles>683</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>68.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x13d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1280x720 @ 69.00Hz</description>
+            <subtitles>683</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>69.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x13e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 70.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>70.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x13f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 71.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>71.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x140</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 72.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>72.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x141</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 73.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>73.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x142</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 74.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>74.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x143</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 75.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>75.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x144</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1152x864 @ 76.00Hz</description>
+            <subtitles>820</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>76.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x145</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>864</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1024x768 @ 77.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>77.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x146</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1024</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1024x768 @ 78.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>78.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x147</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1024</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1024x768 @ 79.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>79.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x148</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1024</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1024x768 @ 80.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>80.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x149</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1024</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1024x768 @ 81.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>81.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x14a</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1024</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 1024x768 @ 82.00Hz</description>
+            <subtitles>729</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>82.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x14b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1024</right>
+                <bottom>768</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 960x720 @ 83.00Hz</description>
+            <subtitles>683</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>83.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x14c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>960</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 960x720 @ 84.00Hz</description>
+            <subtitles>683</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>84.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x14d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>960</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 960x600 @ 85.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>85.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x14e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>960</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 960x540 @ 86.00Hz</description>
+            <subtitles>512</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>86.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x14f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>960</right>
+                <bottom>540</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 9 �3&#x01;28x696 @ 87.00Hz</description>
+            <subtitles>661</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>87.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x150</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>928</right>
+                <bottom>696</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 928x696 @ 88.00Hz</description>
+            <subtitles>661</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>88.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x151</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>928</right>
+                <bottom>696</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 896x672 @ 89.00Hz</description>
+            <subtitles>638</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>89.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x152</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>896</right>
+                <bottom>672</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 896x672 @ 90.00Hz</description>
+            <subtitles>638</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>90.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x153</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>896</right>
+                <bottom>672</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 840x525 @ 91.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>91.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x154</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>840</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 840x525 @ 92.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>92.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x155</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>840</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 840x525 @ 93.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>93.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x156</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>840</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 840x525 @ 94.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>94.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x157</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>840</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 840x525 @ 95.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>95.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x158</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>840</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 832x624 @ 96.00Hz</description>
+            <subtitles>592</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>96.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x159</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>832</right>
+                <bottom>624</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 97.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>97.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x15a</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 98.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>98.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x15b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 99.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>99.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x15c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 100.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>100.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x15d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 101.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>101.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x15e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 102.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>102.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x15f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 103.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>103.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x160</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 104.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>104.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x161</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 105.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>105.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x162</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x600 @ 106.00Hz</description>
+            <subtitles>569</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>106.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x163</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 800x512 @ 107.00Hz</description>
+            <subtitles>486</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>107.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x164</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>512</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 720x480 @ 108.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>108.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x165</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 720x480 @ 109.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>109.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x166</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 720x450 @ 110.00Hz</description>
+            <subtitles>427</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>110.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x167</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>450</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 720x400 @ 111.00Hz</description>
+            <subtitles>379</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>111.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x168</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>400</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 700x525 @ 112.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>112.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x169</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>700</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 700x525 @ 113.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>113.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x16a</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>700</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 700x525 @ 114.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>114.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x16b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>700</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 700x525 @ 115.00Hz</description>
+            <subtitles>498</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>115.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x16c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>700</right>
+                <bottom>525</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 680x384 @ 116.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>116.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x16d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>680</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 680x384 @ 117.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>117.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x16e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>680</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x512 @ 118.00Hz</description>
+            <subtitles>486</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>118.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x16f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>512</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x512 @ 119.00Hz</description>
+            <subtitles>486</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>119.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x170</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>512</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x512 @ 120.00Hz</description>
+            <subtitles>486</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>120.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x171</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>512</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 121.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>121.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x172</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 122.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>122.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x173</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 123.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>123.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x174</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 124.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>124.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x175</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 125.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>125.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x176</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 126.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>126.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x177</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x480 @ 127.00Hz</description>
+            <subtitles>455</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>127.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x1 �3&#x01;78</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x400 @ 128.00Hz</description>
+            <subtitles>379</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>128.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x179</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>400</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 640x350 @ 129.00Hz</description>
+            <subtitles>332</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>129.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x17a</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>350</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 130.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>130.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x17b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 131.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>131.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x17c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 132.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>132.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x17d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 133.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>133.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x17e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 134.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>134.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x17f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 135.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>135.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x180</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 576x432 @ 136.00Hz</description>
+            <subtitles>410</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>136.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x181</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>576</right>
+                <bottom>432</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 512x384 @ 137.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>137.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x182</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>512</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 512x384 @ 138.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>138.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x183</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>512</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 512x384 @ 139.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>139.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x184</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>512</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 512x384 @ 140.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>140.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x185</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>512</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 512x384 @ 141.00Hz</description>
+            <subtitles>364</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>141.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x186</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>512</right>
+                <bottom>384</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 416x312 @ 142.00Hz</description>
+            <subtitles>296</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>142.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x187</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>416</right>
+                <bottom>312</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 400x300 @ 143.00Hz</description>
+            <subtitles>284</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>143.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x188</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>400</right>
+                <bottom>300</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 400x300 @ 144.00Hz</description>
+            <subtitles>284</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>144.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x189</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>400</right>
+                <bottom>300</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 400x300 @ 145.00Hz</description>
+            <subtitles>284</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>145.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x18a</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>400</right>
+                <bottom>300</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 400x300 @ 146.00Hz</description>
+            <subtitles>284</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>146.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x18b</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>400</right>
+                <bottom>300</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 400x300 @ 147.00Hz</description>
+            <subtitles>284</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>147.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x18c</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>400</right>
+                <bottom>300</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 360x200 @ 148.00Hz</description>
+            <subtitles>189</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>148.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x18d</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>360</right>
+                <bottom>200</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 320x240 @ 149.00Hz</description>
+            <subtitles>227</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>149.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x18e</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>320</right>
+                <bottom>240</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 320x240 @ 150.00Hz</description>
+            <subtitles>227</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>150.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x18f</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>320</right>
+                <bottom>240</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 320x240 @ 151.00Hz</description>
+            <subtitles>227</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>151.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x190</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>320</right>
+                <bottom>240</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 320x240 @ 152.00Hz</description>
+            <subtitles>227</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>152.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x191</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>320</right>
+                <bottom>240</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 320x200 @ 153.00Hz</description>
+            <subtitles>189</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>153.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x192</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>320</right>
+                <bottom>200</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>default: 320x175 @ 154.00Hz</description>
+            <subtitles>166</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <refreshrate>154.000000</refreshrate>
+            <output>default</output>
+            <xrandrid>0x193</xrandrid>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>320</right>
+                <bottom>175</bottom>
+            </overscan>
+        </resolution>
+    </resolutions>
+    <audiocds>
+        <autoaction>0</autoaction>
+        <bitrate>192</bitrate>
+        <compressionlevel>5</compressionlevel>
+        <ejectonrip>true</ejectonrip>
+        <encoder>0</encoder>
+        <quality>0</quality>
+        <recordingpath pathversion="1">select writable folder</recordingpath>
+        <trackpathformat>%A - %B/[%N. ][%A - ]%T</trackpathformat>
+        <usecddb>true</usecddb>
+    </audiocds>
+    <audiooutput>
+        <ac3passthrough>true</ac3passthrough>
+        <audiodevice>ALSA:default</audiodevice>
+        <channels>2</channels>
+        <dtshdpassthrough>true</dtshdpassthrough>
+        <dtspassthrough>true</dtspassthrough>
+        <guisoundmode>1</guisoundmode>
+        <mode>0</mode>
+        <multichannellpcm>true</multichannellpcm>
+        <normalizelevels>true</normalizelevels>
+        <passthroughaac>false</passthroughaac>
+        <passthroughdevice>ALSA:iec958:CARD=NVidia,DEV=0</passthroughdevice>
+        <stereoupmix>false</stereoupmix>
+        <truehdpassthrough>true</truehdpassthrough>
+    </audiooutput>
+    <cache>
+        <harddisk>256</harddisk>
+    </cache>
+    <cacheaudio>
+        <dvdrom>256</dvdrom>
+        <internet>256</internet>
+        <lan>256</lan>
+    </cacheaudio>
+    <cachedvd>
+        <dvdrom>2048</dvdrom>
+        <lan>2048</lan>
+    </cachedvd>
+    <cacheunknown>
+        <internet>4096</internet>
+    </cacheunknown>
+    <cachevideo>
+        <dvdrom>2048</dvdrom>
+        <internet>4096</internet>
+        <lan>2048</lan>
+    </cachevideo>
+    <debug>
+        <screenshotpath pathversion="1">select writable folder</screenshotpath>
+        <showloginfo>false</showloginfo>
+    </debug>
+    <dvds>
+        <automenu>false</automenu>
+        <autorun>false</autorun>
+        <playerregion>0</playerregion>
+    </dvds>
+    <epg>
+        <daystodisplay>3</daystodisplay>
+        <defaultguideview>3</defaultguideview>
+        <epgupdate>120</epgupdate>
+        <hidenoinfoavailable>true</hidenoinfoavailable>
+        <ignoredbforclient>false</ignoredbforclient>
+        <preventupdateswhileplayingtv>false</preventupdateswhileplayingtv>
+        <resetepg></resetepg>
+    </epg>
+    <filelists>
+        <allowfiledeletion>false</allowfiledeletion>
+        <ignorethewhensorting>true</ignorethewhensorting>
+        <showaddsourcebuttons>true</showaddsourcebuttons>
+        <showextensions>true</showextensions>
+        <showhidden>false</showhidden>
+        <showparentdiritems>true</showparentdiritems>
+    </filelists>
+    <input>
+        <enablejoystick>true</enablejoystick>
+        <enablemouse>true</enablemouse>
+        <peripherals></peripherals>
+        <remoteaskeyboard>false</remoteaskeyboard>
+    </input>
+    <karaoke>
+        <autopopupselector>false</autopopupselector>
+        <charset>DEFAULT</charset>
+        <enabled>false</enabled>
+        <export></export>
+        <font>arial.ttf</font>
+        <fontcolors>0</fontcolors>
+        <fontheight>36</fontheight>
+        <importcsv></importcsv>
+    </karaoke>
+    <locale>
+        <audiolanguage>original</audiolanguage>
+        <charset>DEFAULT</charset>
+        <country>USA (12h)</country>
+        <language>english</language>
+        <subtitlelanguage>original</subtitlelanguage>
+        <timezone>America/New_York</timezone>
+        <timezonecountry>United States</timezonecountry>
+    </locale>
+    <lookandfeel>
+        <enablerssfeeds>true</enablerssfeeds>
+        <font>Default</font>
+        <rssedit></rssedit>
+        <skin>skin.confluence</skin>
+        <skincolors>SKINDEFAULT</skincolors>
+        <skinsettings></skinsettings>
+        <skintheme>SKINDEFAULT</skintheme>
+        <skinzoom>0</skinzoom>
+        <soundskin>SKINDEFAULT</soundskin>
+        <startupwindow>10000</startupwindow>
+    </lookandfeel>
+    <masterlock>
+        <lockcode>-</lockcode>
+        <maxretries>3</maxretries>
+        <startuplock>false</startuplock>
+    </masterlock>
+    <musicfiles>
+        <findremotethumbs>true</findremotethumbs>
+        <librarytrackformat></librarytrackformat>
+        <librarytrackformatright></librarytrackformatright>
+        <nowplayingtrackformat></nowplayingtrackformat>
+        <nowplayingtrackformatright></nowplayingtrackformatright>
+        <trackformat>[%N. ]%A - %T</trackformat>
+        <trackformatright>%D</trackformatright>
+        <usetags>true</usetags>
+    </musicfiles>
+    <musiclibrary>
+        <albumsscraper>metadata.albums.allmusic.com</albumsscraper>
+        <artistsscraper>metadata.artists.allmusic.com</artistsscraper>
+        <backgroundupdate>false</backgroundupdate>
+        <cleanup></cleanup>
+        <downloadinfo>false</downloadinfo>
+        <enabled>true</enabled>
+        <export></export>
+        <import></import>
+        <showcompilationartists>true</showcompilationartists>
+        <updateonstartup>false</updateonstartup>
+    </musiclibrary>
+    <musicplayer>
+        <autoplaynextitem>true</autoplaynextitem>
+        <crossfade>0</crossfade>
+        <crossfadealbumtracks>true</crossfadealbumtracks>
+        <queuebydefault>false</queuebydefault>
+        <replaygainavoidclipping>false</replaygainavoidclipping>
+        <replaygainnogainpreamp>89</replaygainnogainpreamp>
+        <replaygainpreamp>89</replaygainpreamp>
+        <replaygaintype>1</replaygaintype>
+        <visualisation>visualization.glspectrum</visualisation>
+    </musicplayer>
+    <network>
+        <bandwidth>0</bandwidth>
+        <httpproxypassword></httpproxypassword>
+        <httpproxyport>8080</httpproxyport>
+        <httpproxyserver></httpproxyserver>
+        <httpproxyusername></httpproxyusername>
+        <usehttpproxy>false</usehttpproxy>
+    </network>
+    <pictures>
+        <displayresolution>14</displayresolution>
+        <generatethumbs>true</generatethumbs>
+        <showvideos>false</showvideos>
+        <useexifrotation>true</useexifrotation>
+        <usetags>true</usetags>
+    </pictures>
+    <powermanagement>
+        <displaysoff>0</displaysoff>
+        <shutdownstate>0</shutdownstate>
+        <shutdowntime>0</shutdowntime>
+    </powermanagement>
+    <pvrclient>
+        <menuhook></menuhook>
+    </pvrclient>
+    <pvrmanager>
+        <backendchannelorder>true</backendchannelorder>
+        <channelmanager></channelmanager>
+        <channelscan></channelscan>
+        <enabled>false</enabled>
+        <hideconnectionlostwarning>false</hideconnectionlostwarning>
+        <resetdb></resetdb>
+        <syncchannelgroups>true</syncchannelgroups>
+        <usebackendchannelnumbers>false</usebackendchannelnumbers>
+    </pvrmanager>
+    <pvrmenu>
+        <closechannelosdonswitch>false</closechannelosdonswitch>
+        <iconpath></iconpath>
+        <infoswitch>true</infoswitch>
+        <infotime>5</infotime>
+        <infotimeout>true</infotimeout>
+        <searchicons></searchicons>
+    </pvrmenu>
+    <pvrparental>
+        <duration>300</duration>
+        <enabled>false</enabled>
+        <pin></pin>
+    </pvrparental>
+    <pvrplayback>
+        <channelentrytimeout>0</channelentrytimeout>
+        <confirmchannelswitch>false</confirmchannelswitch>
+        <playminimized>true</playminimized>
+        <scantime>10</scantime>
+        <signalquality>true</signalquality>
+        <startlast>0</startlast>
+    </pvrplayback>
+    <pvrpowermanagement>
+        <backendidletime>15</backendidletime>
+        <dailywakeup>false</dailywakeup>
+        <dailywakeuptime>00:00:00</dailywakeuptime>
+        <enabled>false</enabled>
+        <prewakeup>15</prewakeup>
+        <setwakeupcmd></setwakeupcmd>
+    </pvrpowermanagement>
+    <pvrrecord>
+        <defaultlifetime>99</defaultlifetime>
+        <defaultpriority>50</defaultpriority>
+        <instantrecordtime>120</instantrecordtime>
+        <marginend>10</marginend>
+        <marginstart>2</marginstart>
+        <timernotifications>true</timernotifications>
+    </pvrrecord>
+    <scrapers>
+        <moviesdefault>metadata.themoviedb.org</moviesdefault>
+        <musicvideosdefault>metadata.mtv.com</musicvideosdefault>
+        <tvshowsdefault>metadata.tvdb.com</tvshowsdefault>
+    </scrapers>
+    <screensaver>
+        <mode>screensaver.rsxs.solarwinds</mode>
+        <preview></preview>
+        <settings></settings>
+        <time>3</time>
+        <usedimonpause>true</usedimonpause>
+        <usemusicvisinstead>true</usemusicvisinstead>
+    </screensaver>
+    <scrobbler>
+        <lastfmpass></lastfmpass>
+        <lastfmsubmit>false</lastfmsubmit>
+        <lastfmusername></lastfmusername>
+        <librefmpass></librefmpass>
+        <librefmsubmit>false</librefmsubmit>
+        <librefmusername></librefmusername>
+    </scrobbler>
+    <services>
+        <airplay>true</airplay>
+        <airplaypassword></airplaypassword>
+        <esallinterfaces>true</esallinterfaces>
+        <escontinuousdelay>25</escontinuousdelay>
+        <esenabled>true</esenabled>
+        <esinitialdelay>750</esinitialdelay>
+        <esmaxclients>20</esmaxclients>
+        <esport>9777</esport>
+        <esportrange>10</esportrange>
+        <upnpannounce>true</upnpannounce>
+        <upnprenderer>true</upnprenderer>
+        <upnpserver>true</upnpserver>
+        <useairplaypassword>false</useairplaypassword>
+        <webserver>true</webserver>
+        {% if username == 'rspectre' %}
+        <devicename>Gonzee Box</devicename>
+        <webserverpassword>{{ derp_password }}</webserverpassword>
+        <webserverusername>{{ derp_username }}</webserverusername>
+        {% elif derp_username and derp_password %}
+        <devicename>XBMC</devicename>
+        <webserverpassword>{{ derp_password}}</webserverpassword>
+        <webserverusername>{{ derp_username }}</webserverusername>
+        {% else %}
+        <devicename>XBMC</devicename>
+        <webserverpassword>derp</webserverpassword>
+        <webserverusername>derp</webserverusername>
+        {% endif %}
+        <webserverport>8080</webserverport>
+        <webskin>webinterface.default</webskin>
+        <zeroconf>true</zeroconf>
+    </services>
+    <slideshow>
+        <displayeffects>true</displayeffects>
+        <shuffle>false</shuffle>
+        <staytime>5</staytime>
+    </slideshow>
+    <smb>
+        <winsserver></winsserver>
+        <workgroup>WORKGROUP</workgroup>
+    </smb>
+    <subtitles>
+        <align>0</align>
+        <charset>DEFAULT</charset>
+        <color>1</color>
+        <custompath pathversion="1"></custompath>
+        <font>arial.ttf</font>
+        <height>28</height>
+        <overrideassfonts>false</overrideassfonts>
+        <style>1</style>
+    </subtitles>
+    <system>
+        <playlistspath pathversion="1">special://profile/playlists/</playlistspath>
+    </system>
+    <videolibrary>
+        <actorthumbs>false</actorthumbs>
+        <backgroundupdate>false</backgroundupdate>
+        <cleanup></cleanup>
+        <enabled>true</enabled>
+        <export></export>
+        <flattentvshows>1</flattentvshows>
+        <groupmoviesets>false</groupmoviesets>
+        <import></import>
+        <seasonthumbs>true</seasonthumbs>
+        <showunwatchedplots>true</showunwatchedplots>
+        <updateonstartup>true</updateonstartup>
+    </videolibrary>
+    <videoplayer>
+        <adjustrefreshrate>0</adjustrefreshrate>
+        <autoplaynextitem>false</autoplaynextitem>
+        <displayresolution>14</displayresolution>
+        <errorinaspect>0</errorinaspect>
+        <maxspeedadjust>5.000000</maxspeedadjust>
+        <pauseafterrefreshchange>0</pauseafterrefreshchange>
+        <rendermethod>0</rendermethod>
+        <resamplequality>1</resamplequality>
+        <stretch43>0</stretch43>
+        <synctype>2</synctype>
+        <teletextenabled>true</teletextenabled>
+        <teletextscale>true</teletextscale>
+        <usechd>true</usechd>
+        <usedisplayasclock>false</usedisplayasclock>
+        <usepbo>true</usepbo>
+        <usevaapi>false</usevaapi>
+        <usevdpau>true</usevdpau>
+        <vdpau_allow_xrandr>false</vdpau_allow_xrandr>
+        <vdpaustudiolevel>false</vdpaustudiolevel>
+        <vdpauupscalinglevel>false</vdpauupscalinglevel>
+    </videoplayer>
+    <videoscreen>
+        <guicalibration></guicalibration>
+        <haslcd>false</haslcd>
+        <resolution>0</resolution>
+        <screen>0</screen>
+        <screenmode>DESKTOP</screenmode>
+        <testpattern></testpattern>
+        <vsync>3</vsync>
+    </videoscreen>
+    <weather>
+        <addon>weather.weatherplus</addon>
+        <addonsettings></addonsettings>
+        <currentlocation>1</currentlocation>
+    </weather>
+    <window>
+        <height>480</height>
+        <width>720</width>
+    </window>
+    <skinsettings>
+        <setting type="bool" name="skin.confluence.homepagehiderecentlyadded">false</setting>
+        <setting type="bool" name="skin.confluence.showbackgroundvideo">false</setting>
+        <setting type="bool" name="skin.confluence.showbackgroundvis">false</setting>
+        <setting type="bool" name="skin.confluence.homepageweatherinfo">false</setting>
+        <setting type="bool" name="skin.confluence.homepagemusicinfo">false</setting>
+        <setting type="bool" name="skin.confluence.homepagevideoinfo">false</setting>
+        <setting type="bool" name="skin.confluence.homescriptbutton1">false</setting>
+        <setting type="bool" name="skin.confluence.homescriptbutton2">false</setting>
+        <setting type="bool" name="skin.confluence.homescriptbutton3">false</setting>
+        <setting type="bool" name="skin.confluence.homescriptbutton4">false</setting>
+        <setting type="bool" name="skin.confluence.homescriptbutton5">false</setting>
+        <setting type="bool" name="skin.confluence.homescriptbutton6">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunoweatherbutton">false</setting>
+        <setting type="bool" name="skin.confluence.showweatherfanart">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunopicturesbutton">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunomusicbutton">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunovideosbutton">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunomoviesbutton">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunotvshowsbutton">false</setting>
+        <setting type="bool" name="skin.confluence.homemenunoprogramsbutton">false</setting>
+        <setting type="bool" name="skin.confluence.use_startup_playlist">false</setting>
+        <setting type="bool" name="skin.confluence.videofilesfanart">false</setting>
+        <setting type="bool" name="skin.confluence.tvshowsuseposters">false</setting>
+        <setting type="bool" name="skin.confluence.hidefilenameflagging">false</setting>
+        <setting type="bool" name="skin.confluence.view508hideinfo">false</setting>
+        <setting type="bool" name="skin.confluence.autoscroll">false</setting>
+        <setting type="bool" name="skin.confluence.subtitledownload_enable">false</setting>
+        <setting type="bool" name="skin.confluence.show_slideshow_paused">false</setting>
+        <setting type="bool" name="skin.confluence.no_media_titles_in_scanner">false</setting>
+        <setting type="bool" name="skin.confluence.windowedtrailer">false</setting>
+        <setting type="bool" name="skin.confluence.weatherscript_enable">false</setting>
+        <setting type="bool" name="skin.confluence.lyricscript_enable">false</setting>
+        <setting type="bool" name="skin.neon.homepagehiderecentlyadded">false</setting>
+        <setting type="bool" name="skin.neon.homepageweatherwidget">false</setting>
+        <setting type="bool" name="skin.neon.animation_bg">false</setting>
+        <setting type="bool" name="skin.neon.tvposters">false</setting>
+        <setting type="bool" name="skin.neon.no_global_clock">false</setting>
+        <setting type="bool" name="skin.neon.no_weather_info">false</setting>
+        <setting type="bool" name="skin.neon.showbackgroundvideo">false</setting>
+        <setting type="bool" name="skin.neon.showmusicvis">false</setting>
+        <setting type="bool" name="skin.neon.horizontal_bottom_align">false</setting>
+        <setting type="bool" name="skin.neon.homemenunomusicbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunovideosbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunomoviesbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunohdmoviesbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunotvshowsbutton">false</setting>
+        <setting type="bool" name="skin.neon.homenomenulivetv">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom6">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom6_play">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom7">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom7_play">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom8">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom8_play">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom9">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom9_play">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom10">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom10_play">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom1">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom2">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom3">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom4">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom5">false</setting>
+        <setting type="bool" name="skin.neon.homemenunopicturesbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunotvguide">false</setting>
+        <setting type="bool" name="skin.neon.homemenunoscriptsbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunofavouritesbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunoweatherbutton">false</setting>
+        <setting type="bool" name="skin.neon.conditions_weather_backdrop">false</setting>
+        <setting type="bool" name="skin.neon.homemenunosettingsbutton">false</setting>
+        <setting type="bool" name="skin.neon.signout">false</setting>
+        <setting type="bool" name="skin.neon.homemenunoshutdownbutton">false</setting>
+        <setting type="bool" name="skin.neon.homemenunoplaydvdbutton">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom11">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom12">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom13">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom14">false</setting>
+        <setting type="bool" name="skin.neon.homescriptbutton1">false</setting>
+        <setting type="bool" name="skin.neon.homescriptbutton2">false</setting>
+        <setting type="bool" name="skin.neon.homescriptbutton3">false</setting>
+        <setting type="bool" name="skin.neon.homescriptbutton4">false</setting>
+        <setting type="bool" name="skin.neon.homescriptbutton5">false</setting>
+        <setting type="bool" name="skin.neon.homescriptbutton6">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom15">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom16">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom17">false</setting>
+        <setting type="bool" name="skin.neon.menu_custom18">false</setting>
+        <setting type="bool" name="skin.neon.libraryupdated">false</setting>
+        <setting type="bool" name="skin.neon.global_bottomline">false</setting>
+        <setting type="bool" name="skin.neon.zune_music">false</setting>
+        <setting type="bool" name="skin.neon.debuggrid">false</setting>
+        <setting type="bool" name="skin.neon.showweatherfanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homepagehiderecentlyadded">false</setting>
+        <setting type="bool" name="skin.aeon.nox.effect_bg_home">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homepageweatherinfo">true</setting>
+        <setting type="bool" name="skin.aeon.nox.homepagemusicinfo">false</setting>
+        <setting type="bool" name="skin.aeon.nox.smallmusichome">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homepagevideoinfo">false</setting>
+        <setting type="bool" name="skin.aeon.nox.timehomehigh">false</setting>
+        <setting type="bool" name="skin.aeon.nox.totalshomehigh">false</setting>
+        <setting type="bool" name="skin.aeon.nox.rsshomelow">false</setting>
+        <setting type="bool" name="skin.aeon.nox.customstartupfocus">false</setting>
+        <setting type="bool" name="skin.aeon.nox.animatedbg">false</setting>
+        <setting type="bool" name="skin.aeon.nox.musicfanarthome">false</setting>
+        <setting type="bool" name="skin.aeon.nox.musicextrafanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showbackgroundvideo">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showbackgroundvis">false</setting>
+        <setting type="bool" name="skin.aeon.nox.lowermainmenu">true</setting>
+        <setting type="bool" name="skin.aeon.nox.lockhomemenulow">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homelatestmovies">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homerandommovies">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homelatesttv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homerandomtv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homelatestmusic">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homerandommusic">false</setting>
+        <setting type="bool" name="skin.aeon.nox.lockhomemenu">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homerandomposter">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homelatestposter">false</setting>
+        <setting type="bool" name="skin.aeon.nox.classichome">false</setting>
+        <setting type="bool" name="skin.aeon.nox.glasshome">false</setting>
+        <setting type="bool" name="skin.aeon.nox.animatedweathericons">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homepageweatheranimated">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homescriptbutton1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homescriptbutton2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homescriptbutton3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homescriptbutton4">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homescriptbutton5">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homescriptbutton6">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunovideosbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemusicplaylist1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemusicplaylist2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemusicplaylist3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubmusicfavourite1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubmusicfavourite2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubmusicfavourite3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunomusicbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunosettingsbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunomoviesbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemovieplaylist1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemovieplaylist2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemovieplaylist3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubmoviesfavourite1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubmoviesfavourite2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubmoviesfavourite3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.hometvplaylist1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.hometvplaylist2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.hometvplaylist3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubtvfavourite1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubtvfavourite2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenusubtvfavourite3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunotvshowsbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunoshutdownbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunoweatherbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunotvguidebutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.musicmenulibrary">false</setting>
+        <setting type="bool" name="skin.aeon.nox.biggergap">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenuvideoplaylist1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenuvideoplaylist2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenuvideoplaylist3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenufavourite1">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenufavourite2">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenufavourite3">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenufavourite4">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenufavourite5">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenufavourite6">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunopicturesbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunoprogramsbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunoaddonsbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.shutdownwarning">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunofavouritesbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.homemenunodiscbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showweatherfanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.lowerweatherwidget">true</setting>
+        <setting type="bool" name="skin.aeon.nox.disablecdart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.vinylart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.blurayart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.nowplayingfolderjpg">false</setting>
+        <setting type="bool" name="skin.aeon.nox.itemsplaylist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.tenitemsplaylist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.smallerdialogs">false</setting>
+        <setting type="bool" name="skin.aeon.nox.show_info_paused">false</setting>
+        <setting type="bool" name="skin.aeon.nox.sourceflags">false</setting>
+        <setting type="bool" name="skin.aeon.nox.nostudioratingflags">false</setting>
+        <setting type="bool" name="skin.aeon.nox.breadcrumb">false</setting>
+        <setting type="bool" name="skin.aeon.nox.globaltime">false</setting>
+        <setting type="bool" name="skin.aeon.nox.videolibrarytvfanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.videolibrarymoviefanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.musiclibraryfanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.effect_bg">false</setting>
+        <setting type="bool" name="skin.aeon.nox.videofilesfanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.extrafanartmovies">false</setting>
+        <setting type="bool" name="skin.aeon.nox.extrafanartseries">true</setting>
+        <setting type="bool" name="skin.aeon.nox.curtainbackdrop">false</setting>
+        <setting type="bool" name="skin.aeon.nox.altoverlayinfowall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.transparentwall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.smallmoviewall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showcaseinfoontv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.landscapelogo">false</setting>
+        <setting type="bool" name="skin.aeon.nox.darklist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.bannerwalldark">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showcaseinfoon">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showcaseinfoonep">false</setting>
+        <setting type="bool" name="skin.aeon.nox.darkinfopane">false</setting>
+        <setting type="bool" name="skin.aeon.nox.posterslide">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopanelmusic">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopanellauncher">false</setting>
+        <setting type="bool" name="skin.aeon.nox.darkinfopanemusic">false</setting>
+        <setting type="bool" name="skin.aeon.nox.hidelistflags">false</setting>
+        <setting type="bool" name="skin.aeon.nox.listpanelthin">true</setting>
+        <setting type="bool" name="skin.aeon.nox.slimlist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.roundedcovers">true</setting>
+        <setting type="bool" name="skin.aeon.nox.usecaseslist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.bigtrailerbutton">false</setting>
+        <setting type="bool" name="skin.aeon.nox.autoscroll">false</setting>
+        <setting type="bool" name="skin.aeon.nox.sliminfolist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.bannerinfolist">true</setting>
+        <setting type="bool" name="skin.aeon.nox.tvshowsuseposters">false</setting>
+        <setting type="bool" name="skin.aeon.nox.showcasewrap">false</setting>
+        <setting type="bool" name="skin.aeon.nox.noflow">false</setting>
+        <setting type="bool" name="skin.aeon.nox.noflowtv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.watchedoverlay">false</setting>
+        <setting type="bool" name="skin.aeon.nox.newstatus">false</setting>
+        <setting type="bool" name="skin.aeon.nox.wallgenre">false</setting>
+        <setting type="bool" name="skin.aeon.nox.wallgenretv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.usecases">false</setting>
+        <setting type="bool" name="skin.aeon.nox.noflowdvd">false</setting>
+        <setting type="bool" name="skin.aeon.nox.noflowdvdtv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.highlist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.usecaseslowlist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.lowlistplotonly">false</setting>
+        <setting type="bool" name="skin.aeon.nox.smallmusicwall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.wallmusicvertical">false</setting>
+        <setting type="bool" name="skin.aeon.nox.wallmoviesvertical">false</setting>
+        <setting type="bool" name="skin.aeon.nox.useclearcasesmoviewall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.noflowalbum">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infowallsquare">false</setting>
+        <setting type="bool" name="skin.aeon.nox.usecasesinfowall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.tvinfowalllandscape">false</setting>
+        <setting type="bool" name="skin.aeon.nox.tvinfowallbanner">false</setting>
+        <setting type="bool" name="skin.aeon.nox.useclearcasesinfowall">false</setting>
+        <setting type="bool" name="skin.aeon.nox.kioskmode">false</setting>
+        <setting type="bool" name="skin.aeon.nox.videolibrarymusicvideofanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.hideoptions">false</setting>
+        <setting type="bool" name="skin.aeon.nox.noflowalbumdvd">false</setting>
+        <setting type="bool" name="skin.aeon.nox.lowlist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.cdartlowlist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.cdartfliplist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.stripshowws">false</setting>
+        <setting type="bool" name="skin.confluence.videolibrarymoviefanart">false</setting>
+        <setting type="bool" name="skin.confluence.videolibrarytvfanart">false</setting>
+        <setting type="bool" name="skin.confluence.videolibrarymusicvideofanart">false</setting>
+        <setting type="bool" name="skin.confluence.videolibraryfanartview504">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepageweatherinfo">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagemusicinfo">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagevideoinfo">false</setting>
+        <setting type="bool" name="skin.pm3-hd.animate_skin">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagevideobuttonalwaysfilemode">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehidevideobutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehidemoviesbutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehidetvshowbutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehidemusicbutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehidepicturebutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehideprogrambutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.homepagehideweatherbutton">false</setting>
+        <setting type="bool" name="skin.pm3-hd.show_panel_fanart">false</setting>
+        <setting type="bool" name="skin.pm3-hd.autoscroll">false</setting>
+        <setting type="bool" name="skin.pm3-hd.media_titles_wideicons">false</setting>
+        <setting type="bool" name="skin.pm3-hd.hide_video_flags">false</setting>
+        <setting type="bool" name="skin.pm3-hd.shutdownusehibernate">false</setting>
+        <setting type="bool" name="skin.pm3-hd.show_slideshow_paused">false</setting>
+        <setting type="bool" name="skin.pm3-hd.no_media_titles_in_scanner">false</setting>
+        <setting type="bool" name="skin.pm3-hd.use_startup_playlist">false</setting>
+        <setting type="bool" name="skin.pm3-hd.player_show_teletext_button">false</setting>
+        <setting type="bool" name="skin.pm3-hd.lyricscript_enable">false</setting>
+        <setting type="bool" name="skin.pm3-hd.weatherscript_enable">false</setting>
+        <setting type="bool" name="skin.pm3-hd.subtitlescript_enable">false</setting>
+        <setting type="bool" name="skin.aeon.nox.tvguideposters">false</setting>
+        <setting type="bool" name="skin.aeon.nox.tv_theme">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopaneauto">false</setting>
+        <setting type="bool" name="skin.aeon.nox.1sec">false</setting>
+        <setting type="bool" name="skin.aeon.nox.2sec">false</setting>
+        <setting type="bool" name="skin.aeon.nox.3sec">false</setting>
+        <setting type="bool" name="skin.aeon.nox.4sec">false</setting>
+        <setting type="bool" name="skin.aeon.nox.5sec">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopaneautoep">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopaneautotv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopupauto">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopupautotv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopupautoepisode">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disableinfowallvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disableepisodevl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.notrailerlabel">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fourthumbs">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fourthumbs503">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fourthumbs504">false</setting>
+        <setting type="bool" name="skin.aeon.nox.extrathumbs">false</setting>
+        <setting type="bool" name="skin.aeon.nox.extrathumbs503">false</setting>
+        <setting type="bool" name="skin.aeon.nox.extrathumbs504">false</setting>
+        <setting type="bool" name="skin.aeon.nox.posterinfopane">false</setting>
+        <setting type="bool" name="skin.aeon.nox.posterinfopane503">false</setting>
+        <setting type="bool" name="skin.aeon.nox.posterinfopane504">false</setting>
+        <setting type="bool" name="skin.aeon.nox.lightinfopanel">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fanartinfopane">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fanartinfopane503">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fanartinfopane504">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopaneltagline">false</setting>
+        <setting type="bool" name="skin.aeon.nox.landscapethumb">false</setting>
+        <setting type="bool" name="skin.aeon.nox.preferplot">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablestripshowvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopupepisode">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopup">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablecarouselvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopupnoextrathumbs">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infopopuptv">false</setting>
+        <setting type="bool" name="skin.aeon.nox.stripshowfanart">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablewallvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disableshowcasevl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablebannersvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablelandscapevl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disabledvdcasevl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disableinfolistvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablelowlistvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablebannerwallvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablepanelvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablepostersvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disablebigfanvl">false</setting>
+        <setting type="bool" name="skin.aeon.nox.disableepno">false</setting>
+        <setting type="bool" name="skin.aeon.nox.logowatchcount">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infolistplotonly">false</setting>
+        <setting type="bool" name="skin.aeon.nox.bannerwallvertical">false</setting>
+        <setting type="bool" name="skin.aeon.nox.paneldetail">false</setting>
+        <setting type="bool" name="skin.aeon.nox.posterwrap">true</setting>
+        <setting type="bool" name="skin.aeon.nox.carouselflow">false</setting>
+        <setting type="bool" name="skin.aeon.nox.fstrailer">false</setting>
+        <setting type="bool" name="skin.aeon.nox.infowallflags">false</setting>
+        <setting type="bool" name="skin.aeon.nox.show_slideshow_paused">false</setting>
+        <setting type="bool" name="skin.aeon.nox.animatedbghome">false</setting>
+        <setting type="bool" name="skin.aeon.nox.cinemaexpdefault">false</setting>
+        <setting type="bool" name="skin.aeon.nox.use_startup_playlist">false</setting>
+        <setting type="bool" name="skin.aeon.nox.morefullscreeninfo">false</setting>
+        <setting type="bool" name="skin.aeon.nox.twc.showcurrenthourly">false</setting>
+        <setting type="bool" name="skin.aeon.nox.twc.showweekenddetails">false</setting>
+        <setting type="bool" name="skin.aeon.nox.twc.showdailydetails">false</setting>
+        <setting type="bool" name="skin.aeon.nox.twc.zoomweathermap">false</setting>
+        <setting type="bool" name="skin.confluence.homepageShowRecentlyAdded">false</setting>
+        <setting type="bool" name="skin.confluence.HideBackGroundFanart">false</setting>
+        <setting type="bool" name="skin.confluence.ActivateTvTunes">false</setting>
+        <setting type="bool" name="skin.confluence.UseCustomBackground">false</setting>
+        <setting type="bool" name="skin.confluence.HomepageHideRecentlyAddedVideo">false</setting>
+        <setting type="bool" name="skin.confluence.HomepageHideRecentlyAddedAlbums">false</setting>
+        <setting type="bool" name="skin.confluence.HomeMenuNoMovieButton">false</setting>
+        <setting type="bool" name="skin.confluence.HomeMenuNoTVShowButton">false</setting>
+        <setting type="bool" name="skin.confluence.FirstTimeRun">true</setting>
+        <setting type="string" name="skin.confluence.homescriptbutton1_label"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton2_label"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton3_label"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton4_label"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton5_label"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton6_label"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_weather_folder"></setting>
+        <setting type="string" name="skin.confluence.weatherfanartdir"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_pictures_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_music_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_video_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_movies_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_tvshow_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_programs_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_settings_folder"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_tvshow_folde"></setting>
+        <setting type="string" name="skin.confluence.subtitlescript_path">script.xbmc.subtitles</setting>
+        <setting type="string" name="skin.confluence.startup_playlist_path"></setting>
+        <setting type="string" name="skin.confluence.home_custom_back_addons_folder"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton1_path"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton2_path"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton3_path"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton4_path"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton5_path"></setting>
+        <setting type="string" name="skin.confluence.homescriptbutton6_path"></setting>
+        <setting type="string" name="skin.confluence.weatherscript_label"></setting>
+        <setting type="string" name="skin.confluence.weatherscript_path"></setting>
+        <setting type="string" name="skin.confluence.lyricscript_path"></setting>
+        <setting type="string" name="skin.neon.custommusicfolder"></setting>
+        <setting type="string" name="skin.neon.customvideosfolder"></setting>
+        <setting type="string" name="skin.neon.custommoviesfolder"></setting>
+        <setting type="string" name="skin.neon.customhdmoviesfolder"></setting>
+        <setting type="string" name="skin.neon.customtvshowsfolder"></setting>
+        <setting type="string" name="skin.neon.home_custom_back_tv_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom6_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom6_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom7_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom7_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom8_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom8_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom9_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom9_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom10_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom10_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom1_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom1_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom2_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom2_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom3_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom3_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom4_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom4_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom5_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom5_folder"></setting>
+        <setting type="string" name="skin.neon.custompicturesfolder"></setting>
+        <setting type="string" name="skin.neon.customscriptsfolder"></setting>
+        <setting type="string" name="skin.neon.customfavouritesfolder"></setting>
+        <setting type="string" name="skin.neon.home_custom_back_weather_folder"></setting>
+        <setting type="string" name="skin.neon.home_custom_back_weather_folder1"></setting>
+        <setting type="string" name="skin.neon.customsettingsfolder"></setting>
+        <setting type="string" name="skin.neon.home_custom_back_shutdown_folder"></setting>
+        <setting type="string" name="skin.neon.menu_custom11_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom12_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom13_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom14_label"></setting>
+        <setting type="string" name="skin.neon.homescriptbutton1_label"></setting>
+        <setting type="string" name="skin.neon.homescriptbutton2_label"></setting>
+        <setting type="string" name="skin.neon.homescriptbutton3_label"></setting>
+        <setting type="string" name="skin.neon.homescriptbutton4_label"></setting>
+        <setting type="string" name="skin.neon.homescriptbutton5_label"></setting>
+        <setting type="string" name="skin.neon.homescriptbutton6_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom15_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom16_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom17_label"></setting>
+        <setting type="string" name="skin.neon.menu_custom18_label"></setting>
+        <setting type="string" name="skin.neon.home_custom_rss_logo"></setting>
+        <setting type="string" name="skin.neon.weatherfanartdir"></setting>
+        <setting type="string" name="skin.aeon.nox.artistslogospath"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton4_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton5_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton6_label"></setting>
+        <setting type="string" name="skin.aeon.nox.weatherfanartdir"></setting>
+        <setting type="string" name="skin.aeon.nox.animatedweathericonsdir"></setting>
+        <setting type="string" name="skin.aeon.nox.diffuse_bar"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_pictures_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_music_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_movies_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_tvshow_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_tvguide_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_video_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_programs_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_settings_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_addons_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_shutdown_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourites_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_disc_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_weather_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.diffuse"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_video_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_movies_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_tvshow_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_music_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_pictures_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_programs_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_weather_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.home_custom_back_settings_folder"></setting>
+        <setting type="string" name="skin.pm3-hd.skinsettings">1</setting>
+        <setting type="string" name="skin.pm3-hd.startup_playlist_path"></setting>
+        <setting type="string" name="skin.pm3-hd.lyricscript_path"></setting>
+        <setting type="string" name="skin.pm3-hd.weatherscript_label"></setting>
+        <setting type="string" name="skin.pm3-hd.weatherscript_path"></setting>
+        <setting type="string" name="skin.pm3-hd.subtitlescript_path"></setting>
+        <setting type="string" name="skin.aeon.nox.startup_playlist_path"></setting>
+        <setting type="string" name="skin.aeon.nox.customfocusoffset"></setting>
+        <setting type="string" name="skin.aeon.nox.current_main_menu"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenuvideoplaylist1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_custom1_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenuvideoplaylist2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_custom2_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenuvideoplaylist3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_custom3_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourite1_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourite2_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourite3_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite4_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourite4_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite5_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourite5_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite6_label"></setting>
+        <setting type="string" name="skin.aeon.nox.home_custom_back_favourite6_folder"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton4_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton5_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homescriptbutton6_path"></setting>
+        <setting type="string" name="skin.aeon.nox.lyricscript_path"></setting>
+        <setting type="string" name="skin.aeon.nox.subtitlescript_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenuvideoplaylist1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenuvideoplaylist2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenuvideoplaylist3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemovieplaylist1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemovieplaylist1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemovieplaylist2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemovieplaylist2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemovieplaylist3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemovieplaylist3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.hometvplaylist1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.hometvplaylist1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.hometvplaylist2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.hometvplaylist2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.hometvplaylist3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.hometvplaylist3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemusicplaylist1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemusicplaylist1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemusicplaylist2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemusicplaylist2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemusicplaylist3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemusicplaylist3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite4_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite5_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenufavourite6_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmoviesfavourite1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmoviesfavourite1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmoviesfavourite2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmoviesfavourite2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmoviesfavourite3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmoviesfavourite3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubtvfavourite1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubtvfavourite1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubtvfavourite2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubtvfavourite2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubtvfavourite3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubtvfavourite3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmusicfavourite1_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmusicfavourite1_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmusicfavourite2_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmusicfavourite2_path"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmusicfavourite3_label"></setting>
+        <setting type="string" name="skin.aeon.nox.homemenusubmusicfavourite3_path"></setting>
+        <setting type="string" name="skin.aeon.nox.twc.defaultview"></setting>
+        <setting type="string" name="skin.aeon.nox.twc.mapiconpath"></setting>
+        <setting type="string" name="skin.aeon.nox.twc.defaultmap"></setting>
+        <setting type="string" name="skin.confluence.Home_Custom_Back_PlayDisc_Folder"></setting>
+        <setting type="string" name="skin.confluence.HomeVideosButton1"></setting>
+        <setting type="string" name="skin.confluence.HomeVideosButton2"></setting>
+        <setting type="string" name="skin.confluence.HomeVideosButton3"></setting>
+        <setting type="string" name="skin.confluence.HomeVideosButton4"></setting>
+        <setting type="string" name="skin.confluence.HomeVideosButton5"></setting>
+        <setting type="string" name="skin.confluence.HomeMusicButton1"></setting>
+        <setting type="string" name="skin.confluence.HomeMusicButton2"></setting>
+        <setting type="string" name="skin.confluence.HomeMusicButton3"></setting>
+        <setting type="string" name="skin.confluence.HomeMusicButton4"></setting>
+        <setting type="string" name="skin.confluence.HomeMusicButton5"></setting>
+        <setting type="string" name="skin.confluence.HomePictureButton1"></setting>
+        <setting type="string" name="skin.confluence.HomePictureButton2"></setting>
+        <setting type="string" name="skin.confluence.HomePictureButton3"></setting>
+        <setting type="string" name="skin.confluence.HomePictureButton4"></setting>
+        <setting type="string" name="skin.confluence.HomePictureButton5"></setting>
+        <setting type="string" name="skin.confluence.HomeProgramButton1"></setting>
+        <setting type="string" name="skin.confluence.HomeProgramButton2"></setting>
+        <setting type="string" name="skin.confluence.HomeProgramButton3"></setting>
+        <setting type="string" name="skin.confluence.HomeProgramButton4"></setting>
+        <setting type="string" name="skin.confluence.HomeProgramButton5"></setting>
+        <setting type="string" name="skin.confluence.TWC.MapIconPath">/home/{{ username }}/xbmc-maps/</setting>
+        <setting type="string" name="skin.confluence.TWC.DefaultMap"></setting>
+        <setting type="string" name="skin.confluence.CustomBackgroundPath"></setting>
+    </skinsettings>
+</settings>

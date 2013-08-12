@@ -6,18 +6,26 @@ packages:
       - python-pip
       - build-essential
 
+/opt/salt-utils/check_pip_version.py:
+  file.managed:
+    - source: salt://python/check_pip_version.py
+    - mode: 644
+    - user: root
+    - group: root
+
 Check pip version:
   cmd.run:
     - name: python check_pip_version.py
-    - cwd: /srv/salt/python
+    - cwd: /opt/salt-utils
     - stateful: True
     - require:
       - pkg.installed: python-pip
+      - file.managed: /opt/salt-utils/check_pip_version.py
 
 Upgrade pip:
   cmd.wait:
     - name: pip install --upgrade pip
-    - cwd: /srv/salt/python
+    - cwd: /opt/salt-utils
     - watch:
       - cmd: Check pip version
 
@@ -52,6 +60,11 @@ simplejson:
       - pip.installed: virtualenv
 
 twilio:
+  pip.installed:
+    - require:
+      - pip.installed: virtualenv
+
+GitPython:
   pip.installed:
     - require:
       - pip.installed: virtualenv
