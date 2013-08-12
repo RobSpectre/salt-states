@@ -2,7 +2,7 @@ include:
   - ssh
 
 openssh-server:
-  pkg.installed
+  pkg.latest
 
 ssh:
   service.running:

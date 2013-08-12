@@ -1,5 +1,5 @@
 vim-deps:
-  pkg.installed:
+  pkg.latest:
     - names:
       - exuberant-ctags
     - require_in:
@@ -15,10 +15,9 @@ vim-vundle:
 {% endfor %}
 
 vim:
-  require:
+  pkg.latest:
+  - require:
     - pkg: vim-deps
-  pkg:
-    - installed
     
 /etc/vimrc:
   file.managed:

@@ -1,5 +1,5 @@
 openssh-client:
-  pkg.installed
+  pkg.latest
 
 /etc/ssh/ssh_config:
   file.managed:

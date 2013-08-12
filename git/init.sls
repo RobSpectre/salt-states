@@ -1,5 +1,4 @@
 git:
-  pkg:
-    - installed
+  pkg.latest:
     - require_in:
       - pkg: vim

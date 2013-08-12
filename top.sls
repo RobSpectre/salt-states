@@ -15,3 +15,4 @@ base:
     - sickbeard
     - couchpotato
     - sharedesktop
+    - nvidia

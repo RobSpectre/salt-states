@@ -1,5 +1,5 @@
 vino:
-  pkg.installed
+  pkg.latest
 
 {% for user in pillar.get('users', []) %}
 {% if user.vnc_hash%}

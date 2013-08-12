@@ -1,5 +1,5 @@
 sabnzbdplus:
-  pkg.installed
+  pkg.latest
 
 {% for user in pillar.get('users', []) %}
 {% if user.derp_password %}

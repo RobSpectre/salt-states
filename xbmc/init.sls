@@ -5,7 +5,7 @@ xbmc_repository:
       - pkg.installed: xbmc
 
 xbmc:
-  pkg.installed:
+  pkg.latest:
     - require:
       - pkgrepo.managed: xbmc_repository
 

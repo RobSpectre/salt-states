@@ -1,10 +1,14 @@
+build-essential:
+  pkg.latest
+
 packages:
-  pkg.installed:
+  pkg.latest:
     - names:
       - python
       - python-dev
       - python-pip
-      - build-essential
+    - require:
+      - pkg.installed: build-essential
 
 /opt/salt-utils/check_pip_version.py:
   file.managed:
