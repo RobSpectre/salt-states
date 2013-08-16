@@ -6,6 +6,15 @@ couchpotato:
     - target: /home/{{ user.username }}/couchpotato
     - submodules: true
     - runas: {{ user.username }}
+  service:
+    - running
+    - enable: True
+    - watch:
+      - git: couchpotato
+      - file: /etc/init.d/couchpotato
+    - require:
+      - git.latest: couchpotato
+      - file.managed: /etc/init.d/couchpotato
 
 /home/{{ user.username }}/.couchpotato/settings.conf:
   file.managed:
@@ -29,3 +38,21 @@ couchpotato:
       - git.latest: couchpotato
 {% endif %}
 {% endfor %}
+
+/etc/init.d/couchpotato:
+  file.managed:
+    - source: salt://couchpotato/init_script
+    - mode: 755 
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      {% if pillar.get('users', None) %}
+      username: {{ pillar['users'][0].username }}
+      couchpotato_path: /home/{{ pillar['users'][0].username }}/couchpotato
+      {% else %}
+      username: root
+      couchpotato_path: /usr/local/sbin/CouchPotatoServer/
+      {% endif %}
+    - require:
+      - git.latest: couchpotato

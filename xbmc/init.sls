@@ -23,4 +23,16 @@ xbmc:
         username: {{ user.username }}
     - require:
       - pkg.installed: xbmc
+
+/home/{{ user.username }}/.xbmc/userdata/sources.xml:
+  file.managed:
+    - source: salt://xbmc/sources.xml
+    - mode: 644
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - template: jinja
+    - context:
+        username: {{ user.username }}
+    - require:
+      - pkg.installed: xbmc
 {% endfor %}

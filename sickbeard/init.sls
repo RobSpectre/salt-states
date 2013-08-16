@@ -13,8 +13,17 @@ sickbeard:
     - runas: {{ user.username }}
     - require:
       - pip.installed: cheetah
+  service:
+    - running
+    - enable: True
+    - watch:
+      - git: sickbeard 
+      - file: /etc/init.d/sickbeard
+    - require:
+      - git.latest: sickbeard 
+      - file.managed: /etc/init.d/sickbeard
 
-/home/{{ user.username }}/sickbeard/config.ini:
+/home/{{ user.username }}/.sickbeard/config.ini:
   file.managed:
     - source: salt://sickbeard/config.ini
     - mode: 644
@@ -33,5 +42,39 @@ sickbeard:
       sabnzbd_apikey: {{ user.sabnzbd_apikey }}
     - require:
       - git.latest: sickbeard
+
+/home/{{ user.username }}/.sickbeard/autoProcessTV.cfg:
+  file.managed:
+    - source: salt://sickbeard/autoProcessTV.cfg
+    - mode: 644
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - template: jinja
+    - context:
+      sabnzbd_username: {{ user.sabnzbd_username }}
+      sabnzbd_password: {{ user.sabnzbd_password }}
+    - require:
+      - git.latest: sickbeard
+      - pkg.latest: sabnzbdplus
 {% endif %}
 {% endfor %}
+
+/etc/init.d/sickbeard:
+  file.managed:
+    - source: salt://sickbeard/init_script
+    - mode: 755 
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      {% if pillar.get('users', None) %}
+      username: {{ pillar['users'][0].username }}
+      derp_username: {{ pillar['users'][0].derp_username }}
+      derp_password: {{ pillar['users'][0].derp_password }}
+      {% else %}
+      username: root
+      derp_username: derp
+      derp_password: derp
+      {% endif %}
+    - require:
+      - git.latest: sickbeard
