@@ -5,6 +5,8 @@ base:
     - vim
     - ssh
     - python
+    - apt
+    - salt
   '*.brooklynhacker.com':
     - ssh.server
     - iptables
