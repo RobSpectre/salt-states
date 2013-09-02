@@ -10,6 +10,7 @@ base:
   '*.brooklynhacker.com':
     - ssh.server
     - iptables
+    - supervisor
   'mediacenter*':
     - ssh.server
     - xbmc
@@ -18,3 +19,9 @@ base:
     - couchpotato
     - sharedesktop
     - nvidia
+  'mediastreamer*':
+    - ffmpeg
+    - vlc
+  'mediastreamer01.brooklynhacker.com':
+    - chickcam
+    - nginx
