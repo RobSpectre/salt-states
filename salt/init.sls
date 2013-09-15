@@ -10,11 +10,18 @@ salt-call state.highstate:
     - user: root
     - group: root
 
+/etc/salt/minion.d/empty:
+  file.managed:
+    - source: salt://salt/empty
+    - mode: 600
+    - user: root
+    - group: root
+
 salt-minion:
-  service:
-    - running
+  service.running:
     - enable: True
     - watch:
       - file: /etc/salt/minion
+      - file: /etc/salt/minion.d/*
     - require:
       - file.managed: /etc/salt/minion

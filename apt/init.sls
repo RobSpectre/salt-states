@@ -5,16 +5,9 @@
     - user: root
     - group: root
 
-apt-get update:
+daily-upgrade:
   cron.present:
+    - name: apt-get update && apt-get -o Dpkg::Options::="--force-confdef" upgrade -y
     - user: root
     - minute: random
     - hour: random
-
-apt-get upgrade:
-  cmd.wait:
-    - name: apt-get upgrade -y
-    - user: root
-    - cwd: /
-    - watch:
-      - cron: apt-get update

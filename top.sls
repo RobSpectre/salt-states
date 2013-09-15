@@ -25,3 +25,8 @@ base:
   'mediastreamer01.brooklynhacker.com':
     - chickcam
     - nginx
+  'openvbx.brooklynhacker.com':
+    - nginx
+    - mysql
+    - php
+    - openvbx

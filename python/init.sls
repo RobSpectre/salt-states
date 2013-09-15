@@ -35,40 +35,48 @@ Upgrade pip:
 
 virtualenv:
   pip.installed:
+    - upgrade: True
     - require:
       - pkg: python-pip
 
 virtualenvwrapper:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv 
 
 pyflakes:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv
 
 pep8:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv
 
 requests:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv
 
 simplejson:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv
 
 twilio:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv
 
 GitPython:
   pip.installed:
+    - upgrade: True
     - require:
       - pip.installed: virtualenv

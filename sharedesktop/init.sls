@@ -29,5 +29,12 @@ Turn off view only:
     - watch:
       - file: /home/{{ user.username }}/.gconf/desktop/gnome/remote_access/%gconf.xml
 
+Turn off update notifier:
+  cmd.run:
+    - name: gconftool -s --type bool /apps/update-notifier/auto_launch false
+    - cwd: /home/{{ user.username }}
+    - watch:
+      - file: /home/{{ user.username }}/.gconf/desktop/gnome/remote_access/%gconf.xml
+
 {% endif %}
 {% endfor %}

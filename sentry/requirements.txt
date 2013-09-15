@@ -1,0 +1,2 @@
+sentry==6.0.0
+sentry[postgres]==6.0.0

@@ -10,7 +10,7 @@ supervisord:
     - reload: True
     - watch:
       - file.managed: /etc/supervisor/supervisord.conf
-      - file.managed: /etc/supervisor/conf.d/*
+      - file.directory: /etc/supervisor/conf.d
     - require:
       - pip.installed: supervisor
       - file.managed: /etc/init.d/supervisord
