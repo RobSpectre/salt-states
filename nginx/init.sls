@@ -6,6 +6,7 @@ nginx:
     - require:
       - pkg.latest: nginx
       - file.managed: nginx-conf
+      - file.managed: nginx-empty
     - watch:
       - file: nginx-conf 
       - file: /etc/nginx/sites-enabled/*
@@ -20,6 +21,16 @@ nginx-conf:
   file.managed:
     - name: /etc/nginx/nginx.conf
     - source: salt://nginx/nginx.conf
+    - mode: 644
+    - user: root
+    - group: root
+    - require:
+      - pkg.latest: nginx
+
+nginx-empty:
+  file.managed:
+    - name: /etc/nginx/sites-available/empty
+    - source: salt://nginx/empty
     - mode: 644
     - user: root
     - group: root

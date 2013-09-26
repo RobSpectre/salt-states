@@ -31,7 +31,7 @@ Turn off view only:
 
 Turn off update notifier:
   cmd.run:
-    - name: gconftool -s --type bool /apps/update-notifier/auto_launch false
+    - name: gconftool-2 -s --type bool /apps/update-notifier/auto_launch false
     - cwd: /home/{{ user.username }}
     - watch:
       - file: /home/{{ user.username }}/.gconf/desktop/gnome/remote_access/%gconf.xml

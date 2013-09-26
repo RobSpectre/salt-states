@@ -30,3 +30,7 @@ base:
     - mysql
     - php
     - openvbx
+  'demo01.brooklynhacker.com':
+    - nginx
+    - php
+    - demo
