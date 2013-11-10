@@ -19,6 +19,7 @@ sickbeard:
     - watch:
       - git: sickbeard 
       - file: /etc/init.d/sickbeard
+      - file: /home/{{ user.username }}/.sickbeard/config.ini
     - require:
       - git.latest: sickbeard 
       - file.managed: /etc/init.d/sickbeard
@@ -43,7 +44,7 @@ sickbeard:
     - require:
       - git.latest: sickbeard
 
-/home/{{ user.username }}/.sickbeard/autoProcessTV.cfg:
+/home/{{ user.username }}/sickbeard/autoProcessTV/autoProcessTV.cfg:
   file.managed:
     - source: salt://sickbeard/autoProcessTV.cfg
     - mode: 644
@@ -51,11 +52,54 @@ sickbeard:
     - group: {{ user.username }}
     - template: jinja
     - context:
-      sabnzbd_username: {{ user.sabnzbd_username }}
-      sabnzbd_password: {{ user.sabnzbd_password }}
+      derp_username: {{ user.derp_username }}
+      derp_password: {{ user.derp_password }}
     - require:
       - git.latest: sickbeard
       - pkg.latest: sabnzbdplus
+
+/home/{{ user.username }}/TV:
+  file.directory:
+    - file_mode: 644
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - makedirs: True
+    - require:
+      - user.present: {{ user.username }}
+      - group.present: {{ user.username }}
+    - recurse:
+      - user
+      - group
+      - mode
+
+/home/{{ user.username }}/TV_Download:
+  file.directory:
+    - file_mode: 644
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - makedirs: True
+    - require:
+      - user.present: {{ user.username }}
+      - group.present: {{ user.username }}
+    - recurse:
+      - user
+      - group
+      - mode
+
+/home/{{ user.username }}/sickbeard/autoProcessTV:
+  file.directory:
+    - file_mode: 755
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - require:
+      - git.latest: sickbeard
+    - recurse:
+      - user
+      - group
+      - mode
 {% endif %}
 {% endfor %}
 
