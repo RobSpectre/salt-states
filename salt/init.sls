@@ -1,4 +1,4 @@
-salt-call state.highstate:
+salt-call state.highstate -l debug:
   cron.present:
     - user: root
     - minute: random

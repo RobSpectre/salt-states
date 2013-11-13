@@ -96,8 +96,6 @@ sickbeard:
     - group: {{ user.username }}
     - require:
       - git.latest: sickbeard
-      - user.present: {{ user.username }}
-      - group.present: {{ user.username }}
     - recurse:
       - user
       - group
