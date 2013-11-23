@@ -1,8 +1,3 @@
-salt-call state.highstate -l debug:
-  cron.present:
-    - user: root
-    - minute: random
-
 /etc/salt/minion:
   file.managed:
     - source: salt://salt/minion

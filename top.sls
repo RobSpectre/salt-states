@@ -7,30 +7,36 @@ base:
     - python
     - apt
     - salt
-  '*.brooklynhacker.com':
+  'environment:production':
+    - match: grain
     - ssh.server
     - iptables
     - supervisor
-  'mediacenter*':
-    - ssh.server
-    - xbmc
-    - sabnzbd
-    - sickbeard
-    - couchpotato
-    - sharedesktop
-    - nvidia
-  'mediastreamer*':
+  'roles:mediastreamer':
+    - match: grain
     - ffmpeg
     - vlc
-  'mediastreamer01.brooklynhacker.com':
+  'apps:chickcam':
+    - match: grain
     - chickcam
     - nginx
-  'openvbx.brooklynhacker.com':
+  'apps:openvbx':
+    - match: grain
     - nginx
     - mysql
     - php
     - openvbx
-  'demo01.brooklynhacker.com':
+  'apps:twilio_demo':
+    - match: grain
     - nginx
     - php
     - demo
+  'roles:mediacenter':
+    - match: grain
+    - ssh.server
+    - xbmc
+    - sabnzbd
+    - couchpotato
+    - sharedesktop
+    - sickbeard
+    - nvidia
