@@ -9,6 +9,9 @@
       {% for group in user.groups %}
       - {{ group }}
       {% endfor %}
+      - {{ user.username }}
+    - require:
+      - group: {{ user.username }}
   group:
     - present
 

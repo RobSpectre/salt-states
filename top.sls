@@ -40,3 +40,20 @@ base:
     - sharedesktop
     - sickbeard
     - nvidia
+  'roles:desktop':
+    - match: grain
+    - pidgin
+    - handbrake
+    - screencloud
+    - flash
+    - audacity
+    - openshot
+    - dropbox
+    - heroku
+    - synergy
+    - gimp
+    - gmtp
+    - ffmpeg
+    - vlc
+    - dataanalysis
+    - robrepos
