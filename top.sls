@@ -20,6 +20,10 @@ base:
     - match: grain
     - chickcam
     - nginx
+  'apps:snowcam':
+    - match: grain
+    - snowcam
+    - nginx
   'apps:openvbx':
     - match: grain
     - nginx

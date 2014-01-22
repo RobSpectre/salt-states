@@ -28,6 +28,7 @@ ffmpeg-deps:
       - pkg-config
       - texi2html
       - zlib1g-dev
+      - libfaac-dev
     - require:
       - pkgrepo.managed: ffmpeg-ppa
 
@@ -91,7 +92,7 @@ ffmpeg-source:
 
 ffmpeg-configure:
   cmd.wait:
-    - name: ./configure --prefix="/opt/ffmpeg-source/ffmpeg_build" --extra-cflags="-I/opt/ffmpeg-source/ffmpeg_build/include" --extra-ldflags="-L/opt/ffmpeg-source/ffmpeg_build/lib" --bindir="/usr/local/bin" --extra-libs="-ldl" --enable-gpl --enable-libmp3lame --enable-libass --enable-libtheora --enable-libvorbis --enable-libx264 --enable-nonfree && echo "changed=True comment='ffmpeg reconfigured.'"
+    - name: ./configure --prefix="/opt/ffmpeg-source/ffmpeg_build" --extra-cflags="-I/opt/ffmpeg-source/ffmpeg_build/include" --extra-ldflags="-L/opt/ffmpeg-source/ffmpeg_build/lib" --bindir="/usr/local/bin" --extra-libs="-ldl" --enable-gpl --enable-libmp3lame --enable-libass --enable-libtheora --enable-libvorbis --enable-libx264 --enable-nonfree --enable-libfaac && echo "changed=True comment='ffmpeg reconfigured.'"
     - stateful: True
     - cwd: /opt/ffmpeg-source
     - env:
