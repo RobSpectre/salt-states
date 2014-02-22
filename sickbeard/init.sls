@@ -10,7 +10,8 @@ sickbeard:
     - name: git://github.com/midgetspy/Sick-Beard.git
     - target: /home/{{ user.username }}/sickbeard
     - submodules: true
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
+    - force_checkout: True
     - require:
       - pip.installed: cheetah
   service:

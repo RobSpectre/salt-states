@@ -1,0 +1,19 @@
+options {
+        directory "/var/cache/bind";
+        statistics-file "/var/cache/bind/named_stats.txt";
+        // Use OpenDNS for forwarding.
+        forwarders {
+            208.67.222.222;
+            208.67.220.220;
+        };
+        dnssec-validation auto;
+        auth-nxdomain no;    # conform to RFC1035
+        listen-on-v6 { any; };
+        
+        notify yes;
+
+        // Allow updates by DHCP server.
+        controls {
+            inet 127.0.0.1 allow {localhost; } keys { "rndckey"; };
+        };
+};

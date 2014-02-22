@@ -17,8 +17,6 @@
 
 /home/{{ user.username }}:
   file.directory:
-    - file_mode: 644
-    - dir_mode: 755
     - user: {{ user.username }}
     - group: {{ user.username }}
     - makedirs: True
