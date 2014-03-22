@@ -2,12 +2,12 @@ xbmc_repository:
   pkgrepo.managed:
     - ppa: team-xbmc/ppa
     - require_in:
-      - pkg.installed: xbmc
+      - pkg: xbmc
 
 xbmc:
   pkg.latest:
     - require:
-      - pkgrepo.managed: xbmc_repository
+      - pkgrepo: xbmc_repository
 
 {% for user in pillar.get('users', []) %}
 /home/{{ user.username }}/.xbmc/userdata/guisettings.xml:
@@ -22,7 +22,7 @@ xbmc:
         derp_password: {{ user.derp_password }}
         username: {{ user.username }}
     - require:
-      - pkg.installed: xbmc
+      - pkg: xbmc
 
 /home/{{ user.username }}/.xbmc/userdata/sources.xml:
   file.managed:
@@ -34,5 +34,5 @@ xbmc:
     - context:
         username: {{ user.username }}
     - require:
-      - pkg.installed: xbmc
+      - pkg: xbmc
 {% endfor %}

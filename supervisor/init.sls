@@ -2,7 +2,7 @@
 supervisor:
   pip.installed:
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 supervisord:
   service.running:
@@ -12,8 +12,8 @@ supervisord:
       - file.managed: /etc/supervisor/supervisord.conf
       - file.directory: /etc/supervisor/conf.d
     - require:
-      - pip.installed: supervisor
-      - file.managed: /etc/init.d/supervisord
+      - pip: supervisor
+      - file: /etc/init.d/supervisord
 
 /etc/supervisor/supervisord.conf:
   file.managed:
@@ -26,7 +26,7 @@ supervisord:
       service_user: {{ pillar['supervisor']['service_user'] }}
       service_password: {{ pillar['supervisor']['service_password'] }}
     - require:
-      - pip.installed: supervisor
+      - pip: supervisor
 
 /etc/supervisor/conf.d:
   file.directory:
@@ -35,7 +35,7 @@ supervisord:
     - group: root
     - makedirs: True
     - require:
-      - file.managed: /etc/supervisor/supervisord.conf
+      - file: /etc/supervisor/supervisord.conf
 
 /etc/init.d/supervisord:
   file.managed:
@@ -44,5 +44,5 @@ supervisord:
     - user: root
     - group: root
     - require:
-      - file.managed: /etc/supervisor/supervisord.conf
+      - file: /etc/supervisor/supervisord.conf
 {% endif %}

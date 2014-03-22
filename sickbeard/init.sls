@@ -1,7 +1,7 @@
 cheetah:
   pip.installed:
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 {% for user in pillar.get('users', []) %}
 {% if user.derp_password %}
@@ -13,7 +13,7 @@ sickbeard:
     - user: {{ user.username }}
     - force_checkout: True
     - require:
-      - pip.installed: cheetah
+      - pip: cheetah
   service:
     - running
     - enable: True
@@ -22,8 +22,8 @@ sickbeard:
       - file: /etc/init.d/sickbeard
       - file: /home/{{ user.username }}/.sickbeard/config.ini
     - require:
-      - git.latest: sickbeard 
-      - file.managed: /etc/init.d/sickbeard
+      - git: sickbeard 
+      - file: /etc/init.d/sickbeard
 
 /home/{{ user.username }}/.sickbeard/config.ini:
   file.managed:
@@ -43,7 +43,7 @@ sickbeard:
       sabnzbd_password: {{ user.sabnzbd_password }}
       sabnzbd_apikey: {{ user.sabnzbd_apikey }}
     - require:
-      - git.latest: sickbeard
+      - git: sickbeard
 
 /home/{{ user.username }}/sickbeard/autoProcessTV/autoProcessTV.cfg:
   file.managed:
@@ -56,8 +56,8 @@ sickbeard:
       derp_username: {{ user.derp_username }}
       derp_password: {{ user.derp_password }}
     - require:
-      - git.latest: sickbeard
-      - pkg.latest: sabnzbdplus
+      - git: sickbeard
+      - pkg: sabnzbdplus
 
 /home/{{ user.username }}/TV:
   file.directory:
@@ -67,8 +67,8 @@ sickbeard:
     - group: {{ user.username }}
     - makedirs: True
     - require:
-      - user.present: {{ user.username }}
-      - group.present: {{ user.username }}
+      - user: {{ user.username }}
+      - group: {{ user.username }}
     - recurse:
       - user
       - group
@@ -82,8 +82,8 @@ sickbeard:
     - group: {{ user.username }}
     - makedirs: True
     - require:
-      - user.present: {{ user.username }}
-      - group.present: {{ user.username }}
+      - user: {{ user.username }}
+      - group: {{ user.username }}
     - recurse:
       - user
       - group
@@ -96,7 +96,7 @@ sickbeard:
     - user: {{ user.username }}
     - group: {{ user.username }}
     - require:
-      - git.latest: sickbeard
+      - git: sickbeard
     - watch:
       - git: sickbeard
     - recurse:
@@ -124,4 +124,4 @@ sickbeard:
       derp_password: derp
       {% endif %}
     - require:
-      - git.latest: sickbeard
+      - git: sickbeard

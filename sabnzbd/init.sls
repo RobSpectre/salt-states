@@ -1,3 +1,5 @@
+{% for user in pillar.get('users', []) %}
+{% if user.derp_password %}
 sabnzbdplus:
   pkg:
     - latest
@@ -7,12 +9,11 @@ sabnzbdplus:
     - watch:
       - pkg: sabnzbdplus
       - file: /etc/default/sabnzbdplus
+      - file: /home/{{ user.username }}/.sabnzbd/sabnzbd.ini
     - require:
-      - pkg.latest: sabnzbdplus 
-      - file.managed: /etc/default/sabnzbdplus
+      - pkg: sabnzbdplus 
+      - file: /etc/default/sabnzbdplus
 
-{% for user in pillar.get('users', []) %}
-{% if user.derp_password %}
 /home/{{ user.username }}/.sabnzbd/sabnzbd.ini:
   file.managed:
     - source: salt://sabnzbd/sabnzbd.ini
@@ -33,7 +34,7 @@ sabnzbdplus:
       nzbmatrix_apikey: {{ user.nzbmatrix_apikey }}
       nzbmatrix_userid: {{ user.nzbmatrix_userid }}
     - require:
-      - pkg.latest: sabnzbdplus
+      - pkg: sabnzbdplus
 {% endif %}
 {% endfor %}
 
@@ -51,4 +52,4 @@ sabnzbdplus:
       username: root
       {% endif %}
     - require:
-      - pkg.latest: sabnzbdplus
+      - pkg: sabnzbdplus

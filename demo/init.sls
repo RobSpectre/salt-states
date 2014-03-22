@@ -7,8 +7,8 @@ twilio-demo-docroot:
     - group: rspectre
     - makedirs: True
     - require:
-      - user.present: rspectre
-      - group.present: rspectre
+      - user: rspectre
+      - group: rspectre
     - recurse:
       - user
       - group
@@ -25,7 +25,7 @@ twilio-demo-nginx-conf:
     - context:
       server_name: demo01.brooklynhacker.com
     - require:
-      - pkg.latest: nginx
+      - pkg: nginx
 
 twilio-demo-log-directory:
     file.directory:
@@ -34,7 +34,7 @@ twilio-demo-log-directory:
       - user: www-data
       - group: www-data
       - require:
-        - file.managed: twilio-demo-nginx-conf
+        - file: twilio-demo-nginx-conf
 
 twilio-demo-nginx-enable:
   file.symlink:
@@ -42,4 +42,4 @@ twilio-demo-nginx-enable:
     - target: /etc/nginx/sites-available/twilio-demo.conf
     - force: false
     - require:
-      - file.managed: twilio-demo-log-directory
+      - file: twilio-demo-log-directory

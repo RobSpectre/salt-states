@@ -1,3 +1,8 @@
+swig:
+  pkg.latest:
+    - require_in:
+      - service: salt-minion
+
 /etc/salt/minion:
   file.managed:
     - source: salt://salt/minion
@@ -19,4 +24,4 @@ salt-minion:
       - file: /etc/salt/minion
       - file: /etc/salt/minion.d/*
     - require:
-      - file.managed: /etc/salt/minion
+      - file: /etc/salt/minion

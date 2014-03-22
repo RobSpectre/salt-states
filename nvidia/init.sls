@@ -23,4 +23,4 @@ lightdm:
     - user: root
     - group: root
     - require:
-      - pkg.installed: nvidia-current
+      - pkg: nvidia-current

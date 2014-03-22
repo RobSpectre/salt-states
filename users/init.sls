@@ -21,12 +21,8 @@
     - group: {{ user.username }}
     - makedirs: True
     - require:
-      - user.present: {{ user.username }}
-      - group.present: {{ user.username }}
-    - recurse:
-      - user
-      - group
-      - mode
+      - user: {{ user.username }}
+      - group: {{ user.username }}
 
 /home/{{ user.username }}/.bash_profile:
   file.managed:
@@ -35,7 +31,7 @@
     - user: {{ user.username }}
     - group: {{ user.username }}
     - require:
-      - file.directory: /home/{{ user.username }}
+      - file: /home/{{ user.username }}
 
 {% if user.get('environment_variables', None) %}
 /home/{{ user.username }}/.bash_environment:
@@ -45,7 +41,7 @@
     - user: {{ user.username }}
     - group: {{ user.username }}
     - require:
-      - file.managed: /home/{{ user.username }}/.bash_profile
+      - file: /home/{{ user.username }}/.bash_profile
     - template: jinja
     - context:
       environment_variables: {{ user.environment_variables }} 

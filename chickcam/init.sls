@@ -9,7 +9,7 @@
     - createhome: True
     - require:
       - group: {{ pillar['chickcam']['user'] }}
-      - pkg.latest: nginx
+      - pkg: nginx
 
 {{ pillar['chickcam']['user'] }}-hls-supervisord-conf:
   file.managed:
@@ -26,7 +26,7 @@
       server_name: {{ pillar['chickcam']['server_name'] }}
     - context:
     - require:
-      - pip.installed: supervisor
+      - pip: supervisor
 
 /home/{{ pillar['chickcam']['user'] }}/{{ pillar['chickcam']['server_name'] }}/hls:
     file.directory:
@@ -40,8 +40,8 @@
         - group
         - mode
       - require:
-        - pkg.latest: nginx
-        - file.managed: {{ pillar['chickcam']['user'] }}-hls-supervisord-conf 
+        - pkg: nginx
+        - file: {{ pillar['chickcam']['user'] }}-hls-supervisord-conf 
 
 chickcam-hls:
   supervisord.running:
@@ -50,9 +50,9 @@ chickcam-hls:
     - conf_file: /etc/supervisor/supervisord.conf
     - bin_env: /usr/local/bin/supervisorctl
     - require:
-      - pip.installed: supervisor
-      - file.managed: {{ pillar['chickcam']['user'] }}-hls-supervisord-conf
-      - file.managed: ffmpeg-stream-preset 
+      - pip: supervisor
+      - file: {{ pillar['chickcam']['user'] }}-hls-supervisord-conf
+      - file: ffmpeg-stream-preset 
     - watch:
       - pip: supervisor
       - file: {{ pillar['chickcam']['user'] }}-hls-supervisord-conf 
@@ -78,7 +78,7 @@ ffmpeg-stream-preset:
       linux_user: {{ pillar['chickcam']['user'] }}
       server_name: {{ pillar['chickcam']['server_name'] }}
     - require:
-      - pkg.latest: nginx
+      - pkg: nginx
 
 {{ pillar['chickcam']['user'] }}-log-directory:
     file.directory:
@@ -87,7 +87,7 @@ ffmpeg-stream-preset:
       - user: www-data
       - group: www-data
       - require:
-        - pkg.latest: nginx
+        - pkg: nginx
         - file.managed: {{ pillar['chickcam']['user'] }}-nginx-conf
 
 enable-nginx-site:
@@ -96,5 +96,5 @@ enable-nginx-site:
     - target: /etc/nginx/sites-available/{{ pillar['chickcam']['server_name'] }}.conf
     - force: false
     - require:
-      - file.managed: {{ pillar['chickcam']['user'] }}-nginx-conf 
+      - file: {{ pillar['chickcam']['user'] }}-nginx-conf 
 {% endif %}

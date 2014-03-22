@@ -8,7 +8,7 @@ packages:
       - python-dev
       - python-pip
     - require:
-      - pkg.installed: build-essential
+      - pkg: build-essential
 
 /opt/salt-utils/check_pip_version.py:
   file.managed:
@@ -23,8 +23,8 @@ Check pip version:
     - cwd: /opt/salt-utils
     - stateful: True
     - require:
-      - pkg.installed: python-pip
-      - file.managed: /opt/salt-utils/check_pip_version.py
+      - pkg: python-pip
+      - file: /opt/salt-utils/check_pip_version.py
 
 Upgrade pip:
   cmd.wait:
@@ -43,40 +43,40 @@ virtualenvwrapper:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv 
+      - pip: virtualenv 
 
 pyflakes:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 pep8:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 requests:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 simplejson:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 twilio:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
 
 GitPython:
   pip.installed:
     - upgrade: True
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv

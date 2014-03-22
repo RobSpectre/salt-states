@@ -1,0 +1,11 @@
+zone "ghettopenthouse.pvt" IN {
+  type master;
+  file "/var/lib/bind/zone.{{ network.domain_zone }}";
+  allow-update { key DHCP_UPDATER; };
+};
+
+zone "{{ network.range_zone }}.in-addr.arpa" {
+  type master;
+  file "/var/lib/bind/revp.{{ network.range_zone }}.in-addr.arpa";
+  allow-update { key DHCP_UPDATER; };
+};

@@ -4,9 +4,8 @@ schedule:
   highstate:
     function: state.highstate
     minutes: 60
-  apt-update:
-    function: apt-get update && apt-get -o Dpkg::Options::="--force-confdef" upgrade -y
-    minutes: 140
   time-sync:
-    function: ntpdate time.nist.gov
+    function: cmd.run
+    args:
+      - 'ntpdate time.nist.gov'
     minutes: 60

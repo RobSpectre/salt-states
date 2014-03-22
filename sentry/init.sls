@@ -6,11 +6,11 @@ sentry-deps:
       - nginx
       - postgresql
     - require_in:
-      - virtualenv.installed: sentry
-      - file.managed: /home/sentry/.sentry/sentry.conf.py
-      - file.directory: /home/sentry
-      - user.present: sentry
-      - group.present: sentry
+      - virtualenv: sentry
+      - file: /home/sentry/.sentry/sentry.conf.py
+      - file: /home/sentry
+      - user: sentry
+      - group: sentry
 
 sentry:
   user.present:
@@ -18,7 +18,7 @@ sentry:
   group:
     - present
   require:
-    - pkg.installed: sentry-deps
+    - pkg: sentry-deps
 
 /home/sentry:
   file.directory:
@@ -28,14 +28,14 @@ sentry:
     - group: sentry
     - makedirs: True
     - require:
-      - user.present: sentry 
-      - group.present: sentry
+      - user: sentry 
+      - group: sentry
     - recurse:
       - user
       - group
       - mode
   require:
-    - pkg.installed: sentry-deps
+    - pkg: sentry-deps
 
 /home/sentry/.sentry/sentry.conf.py:
   file.managed:
@@ -45,7 +45,7 @@ sentry:
     - group: sentry
     - template: jinja
   require:
-    - pkg.installed: sentry-deps
+    - pkg: sentry-deps
 
 /home/sentry/virtualenv:
   virtualenv.managed:
@@ -53,7 +53,7 @@ sentry:
     - requirements: salt://sentry/requirements.txt
     - runas: sentry
   require:
-    - pkg.installed: sentry-deps
+    - pkg: sentry-deps
 
 sentry-service:
   service:
@@ -66,5 +66,5 @@ sentry-service:
       - virtualenv.managed: /home/sentry/virtualenv
       - file.managed: /home/sentry/.sentry/sentry.conf.py
   require:
-    - pkg.installed: sentry-deps
-    - virtualenv.managed: /home/sentry/virtualenv
+    - pkg: sentry-deps
+    - virtualenv: /home/sentry/virtualenv

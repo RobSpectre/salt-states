@@ -44,6 +44,7 @@ base:
     - sharedesktop
     - sickbeard
     - nvidia
+    - transmission
   'roles:desktop':
     - match: grain
     - pidgin
@@ -61,3 +62,9 @@ base:
     - vlc
     - dataanalysis
     - robrepos
+  'roles:domaincontroller':
+    - match: grain
+    - named
+    - dhcpd
+  'domaincontroller01.ghettopenthouse.pvt':
+    - dns_ghettopenthouse

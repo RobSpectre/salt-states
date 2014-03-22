@@ -8,9 +8,9 @@
     - shell: /sbin/nologin
     - createhome: True
     - require:
-      - pkg.latest: nginx
-      - pkg.latest: mysql-server
-      - pkg.latest: php
+      - pkg: nginx
+      - pkg: mysql-server
+      - pkg: php
 
 /home/{{ pillar['openvbx']['user'] }}:
   file.directory:
@@ -20,8 +20,8 @@
     - group: www-data
     - makedirs: True
     - require:
-      - user.present: {{ pillar['openvbx']['user'] }}
-      - group.present: {{ pillar['openvbx']['user'] }}
+      - user: {{ pillar['openvbx']['user'] }}
+      - group: {{ pillar['openvbx']['user'] }}
     - recurse:
       - user
       - group
@@ -42,7 +42,7 @@
     - user: www-data
     - group: www-data
     - require:
-      - git.latest: {{ pillar['openvbx']['user'] }}-source
+      - git: {{ pillar['openvbx']['user'] }}-source
 
 {{ pillar['openvbx']['user'] }}-mysql-user:
   mysql_user.present:
@@ -50,20 +50,20 @@
     - host: {{ pillar['openvbx']['mysql_host'] }}
     - password: {{ pillar['openvbx']['mysql_password'] }}
     - require:
-      - service.running: mysql
-      - service.running: salt-minion
+      - service: mysql
+      - service: salt-minion
   mysql_grants.present:
     - grant: all privileges
     - database: {{ pillar['openvbx']['user'] }}.*
     - user: {{ pillar['openvbx']['user'] }}
     - require:
-      - mysql_user.present: {{ pillar['openvbx']['user'] }}
+      - mysql_user: {{ pillar['openvbx']['user'] }}
 
 {{ pillar['openvbx']['user'] }}-mysql-database:
   mysql_database.present:
     - name: {{ pillar['openvbx']['user'] }}
     - require:
-      - service.running: mysql
+      - service: mysql
       - service.running: salt-minion
 
 {{ pillar['openvbx']['user'] }}-nginx-conf:
@@ -77,7 +77,7 @@
     - context:
       server_name: {{ pillar['openvbx']['server_name'] }}
     - require:
-      - pkg.latest: nginx
+      - pkg: nginx
 
 {{ pillar['openvbx']['user'] }}-log-directory:
     file.directory:
@@ -86,7 +86,7 @@
       - user: www-data
       - group: www-data
       - require:
-        - file.managed: {{ pillar['openvbx']['user'] }}-nginx-conf
+        - file: {{ pillar['openvbx']['user'] }}-nginx-conf
 
 {{ pillar['openvbx']['user'] }}-nginx-enable:
   file.symlink:
@@ -94,5 +94,5 @@
     - target: /etc/nginx/sites-available/{{ pillar['openvbx']['user'] }}.conf
     - force: false
     - require:
-      - file.managed: {{ pillar['openvbx']['user'] }}-log-directory
+      - file: {{ pillar['openvbx']['user'] }}-log-directory
 {% endif %}

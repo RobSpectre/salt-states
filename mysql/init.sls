@@ -11,20 +11,20 @@ mysql-server:
     - name: mysql
     - enable: True
     - require:
-      - pkg.latest: mysql-server
+      - pkg: mysql-server
 
 distribute:
   pip.installed:
     - upgrade: True
     - require:
-      - pkg.latest: mysql-server
+      - pkg: mysql-server
 
 python-mysql:
   pip.installed:
     - name: MySQL-python
     - upgrade: True
     - require:
-      - pip.installed: distribute
+      - pip: distribute
 
 {% if pillar.get('mysql', None) %}
 root-mysql-user:
@@ -33,9 +33,9 @@ root-mysql-user:
     - stateful: True
     - cwd: /var/run/mysqld
     - require:
-      - pkg.latest: mysql-server
-      - service.running: mysql
-      - service.running: salt-minion
+      - pkg: mysql-server
+      - service: mysql
+      - service: salt-minion
     - watch:
       - pkg: mysql-server
 
@@ -50,5 +50,5 @@ mysql-minion-file:
     - context:
       root_password: '{{ pillar['mysql']['root_password'] }}'
     - require:
-      - pkg.latest: mysql-server
+      - pkg: mysql-server
 {% endif %}

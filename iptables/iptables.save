@@ -15,5 +15,10 @@
 -A RH-Firewall-1-INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT 
 -A RH-Firewall-1-INPUT -p tcp -m state --state NEW -m tcp --dport 4505 -j ACCEPT 
 -A RH-Firewall-1-INPUT -p tcp -m state --state NEW -m tcp --dport 4506 -j ACCEPT 
+{% if 'domaincontroller' in roles %}
+-A RH-Firewall-1-INPUT -s {{ network.range }}.0/24 -p tcp -m state --state NEW -m tcp --dport 53 -j ACCEPT 
+-A RH-Firewall-1-INPUT -s {{ network.range }}.0/24 -p udp -m state --state NEW -m udp --dport 53 -j ACCEPT 
+-A RH-Firewall-1-INPUT -s {{ network.range }}.0/24 -p udp -m state --state NEW -m udp --dport 67:68 -j ACCEPT 
+{% endif %}
 -A RH-Firewall-1-INPUT -j REJECT --reject-with icmp-host-prohibited 
 COMMIT

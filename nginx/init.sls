@@ -4,9 +4,9 @@ nginx:
   service.running:
     - enable: True
     - require:
-      - pkg.latest: nginx
-      - file.managed: nginx-conf
-      - file.managed: nginx-empty
+      - pkg: nginx
+      - file: nginx-conf
+      - file: nginx-empty
     - watch:
       - file: nginx-conf 
       - file: /etc/nginx/sites-enabled/*
@@ -25,7 +25,7 @@ nginx-conf:
     - user: root
     - group: root
     - require:
-      - pkg.latest: nginx
+      - pkg: nginx
 
 nginx-empty:
   file.managed:
@@ -35,4 +35,4 @@ nginx-empty:
     - user: root
     - group: root
     - require:
-      - pkg.latest: nginx
+      - pkg: nginx

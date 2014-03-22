@@ -1,0 +1,15 @@
+$ORIGIN {{ network.domain }}.
+$TTL 1D
+@     IN SOA   {{ network.hostname }} hostmaster (
+                        201402271 ; serial
+                        8H        ; refresh
+                        4H        ; retry
+                        4W        ; expire
+                        1D )      ; minimum
+                    NS      {{ network.hostname }} 
+localhost           A       127.0.0.1
+{% if network.static_hosts %}
+{% for host in network.static_hosts %}
+{{ host.hostname }}             A       {{ host.ip }}
+{% endfor %}
+{% endif %}

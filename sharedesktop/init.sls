@@ -13,7 +13,7 @@ vino:
     - context:
       vnc_hash: {{ user.vnc_hash }}
     - require:
-      - pkg.installed: vino
+      - pkg: vino
 
 Turn off confirmation prompt:
   cmd.run:

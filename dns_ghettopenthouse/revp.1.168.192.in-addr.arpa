@@ -1,0 +1,15 @@
+$ORIGIN {{ network.range_zone }}.in-addr.arpa.
+$TTL 1D
+@     IN SOA  {{ network.hostname }}.{{ network.domain }}. hostmaster.{{ network.domain }}. (
+              201402271  ; serial
+              28800      ; refresh (8 hours)
+              14400      ; retry (4 hours)
+              2419200    ; expire (4 weeks)
+              86400      ; minimum (1 day)
+              )
+            NS  {{ network.hostname }}.{{ network.domain }}.
+{% if network.static_hosts %}
+{% for host in network.static_hosts %}
+{{ host.ptr }}           PTR {{ host.hostname }}.{{ network.domain }}.
+{% endfor %}
+{% endif %}

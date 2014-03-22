@@ -9,7 +9,7 @@ ffmpeg-ppa:
   pkgrepo.managed:
   - ppa: jon-severinsson/ffmpeg 
   - require:
-    - pkg.removed: old-versions-ffmpeg
+    - pkg: old-versions-ffmpeg
 
 ffmpeg-deps:
   pkg.latest:
@@ -30,7 +30,7 @@ ffmpeg-deps:
       - zlib1g-dev
       - libfaac-dev
     - require:
-      - pkgrepo.managed: ffmpeg-ppa
+      - pkgrepo: ffmpeg-ppa
 
 yasm-tarball:
   file.managed:
@@ -38,7 +38,7 @@ yasm-tarball:
     - source: http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz
     - source_hash: md5=4cfc0686cf5350dd1305c4d905eb55a6
     - require:
-      - pkgrepo.managed: ffmpeg-ppa
+      - pkgrepo: ffmpeg-ppa
 
 yasm-source:
   cmd.wait:
@@ -46,7 +46,7 @@ yasm-source:
     - stateful: True
     - cwd: /opt/yasm-source
     - require:
-      - file.managed: yasm-tarball
+      - file: yasm-tarball
     - watch:
       - file: yasm-tarball
 
@@ -88,7 +88,7 @@ ffmpeg-source:
     - target: /opt/ffmpeg-source
     - submodules: True
     - require:
-      - pkgrepo.managed: ffmpeg-ppa
+      - pkgrepo: ffmpeg-ppa
 
 ffmpeg-configure:
   cmd.wait:
@@ -99,8 +99,8 @@ ffmpeg-configure:
       PKG_CONFIG_PATH: $HOME/ffmpeg_build/lib/pkgconfig 
       PATH: "/opt/yasm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
     - require:
-      - git.latest: ffmpeg-source
-      - pkg.latest: ffmpeg-deps
+      - git: ffmpeg-source
+      - pkg: ffmpeg-deps
       - cmd: yasm-clean
     - watch:
       - git: ffmpeg-source
@@ -111,7 +111,7 @@ ffmpeg-build:
     - stateful: True
     - cwd: /opt/ffmpeg-source
     - require:
-      - git.latest: ffmpeg-source
+      - git: ffmpeg-source
     - watch:
       - cmd: ffmpeg-configure
 
@@ -121,7 +121,7 @@ ffmpeg-install:
     - stateful: True
     - cwd: /opt/ffmpeg-source
     - require:
-      - git.latest: ffmpeg-source
+      - git: ffmpeg-source
     - watch:
       - cmd: ffmpeg-build
 
@@ -131,6 +131,6 @@ ffmpeg-clean:
     - stateful: True
     - cwd: /opt/ffmpeg-source
     - require:
-      - git.latest: ffmpeg-source
+      - git: ffmpeg-source
     - watch:
       - cmd: ffmpeg-install

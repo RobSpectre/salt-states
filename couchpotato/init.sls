@@ -12,9 +12,10 @@ couchpotato:
     - watch:
       - git: couchpotato
       - file: /etc/init.d/couchpotato
+      - file: /home/{{ user.username }}/.couchpotato/settings.conf
     - require:
-      - git.latest: couchpotato
-      - file.managed: /etc/init.d/couchpotato
+      - git: couchpotato
+      - file: /etc/init.d/couchpotato
 
 /home/{{ user.username }}/.couchpotato/settings.conf:
   file.managed:
@@ -34,8 +35,10 @@ couchpotato:
       nzbmatrix_apikey: {{ user.nzbmatrix_apikey }}
       username: {{ user.username }}
       sabnzbd_apikey: {{ user.sabnzbd_apikey }}
+      iptorrents_username: {{ user.iptorrents_username }}
+      iptorrents_password: {{ user.iptorrents_password }}
     - require:
-      - git.latest: couchpotato
+      - git: couchpotato
 {% endif %}
 {% endfor %}
 
@@ -55,4 +58,4 @@ couchpotato:
       couchpotato_path: /usr/local/sbin/CouchPotatoServer/
       {% endif %}
     - require:
-      - git.latest: couchpotato
+      - git: couchpotato
