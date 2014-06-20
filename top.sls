@@ -7,6 +7,7 @@ base:
     - python
     - apt
     - salt
+    - archive
   'environment:production':
     - match: grain
     - ssh.server
@@ -66,5 +67,11 @@ base:
     - match: grain
     - named
     - dhcpd
+  'apps:votr':
+    - match: grain
+    - nginx
+    - nodejs
+    - couchdb
+    - votr
   'domaincontroller01.ghettopenthouse.pvt':
     - dns_ghettopenthouse

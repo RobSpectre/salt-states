@@ -1,6 +1,12 @@
+nginx-repo:
+  pkgrepo.managed:
+    - ppa: nginx/stable
+
 nginx:
   pkg.latest:
     - name: nginx
+    - require:
+      - pkgrepo: nginx-repo
   service.running:
     - enable: True
     - require:

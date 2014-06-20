@@ -9,6 +9,7 @@ vim-deps:
 vim-vundle:
   git.latest:
     - name: git://github.com/gmarik/vundle.git
+    - rev: master
     - target: /home/{{ user.username }}/.vim/bundle/vundle
     - submodules: true
     - runas: {{ user.username }} 

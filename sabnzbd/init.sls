@@ -1,8 +1,15 @@
 {% for user in pillar.get('users', []) %}
 {% if user.derp_password %}
+
+sabnzbdplus-ppa:
+  pkgrepo.managed:
+    - ppa: jcfp/ppa
+
 sabnzbdplus:
   pkg:
     - latest
+    - require:
+      - pkgrepo: sabnzbdplus-ppa
   service:
     - running
     - enable: True

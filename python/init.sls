@@ -9,27 +9,29 @@ packages:
       - python-pip
     - require:
       - pkg: build-essential
+      - service: salt-minion
 
-/opt/salt-utils/check_pip_version.py:
+/usr/local/bin/check_pip_version.py:
   file.managed:
     - source: salt://python/check_pip_version.py
     - mode: 644
     - user: root
     - group: root
+    - require:
+      - pkg: python-pip
 
 Check pip version:
   cmd.run:
     - name: python check_pip_version.py
-    - cwd: /opt/salt-utils
+    - cwd: /usr/local/bin
     - stateful: True
     - require:
       - pkg: python-pip
-      - file: /opt/salt-utils/check_pip_version.py
 
 Upgrade pip:
   cmd.wait:
     - name: pip install --upgrade pip
-    - cwd: /opt/salt-utils
+    - cwd: /tmp
     - watch:
       - cmd: Check pip version
 

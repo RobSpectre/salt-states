@@ -9,11 +9,20 @@ supervisord:
     - enable: True
     - reload: True
     - watch:
-      - file.managed: /etc/supervisor/supervisord.conf
-      - file.directory: /etc/supervisor/conf.d
+      - file: /etc/supervisor/supervisord.conf
+      - file: /etc/supervisor/conf.d/*
     - require:
       - pip: supervisor
       - file: /etc/init.d/supervisord
+
+/etc/supervisor:
+  file.directory:
+    - mode: 644
+    - user: root
+    - group: root
+    - makedirs: True
+    - require:
+      - pip: supervisor
 
 /etc/supervisor/supervisord.conf:
   file.managed:
@@ -26,7 +35,8 @@ supervisord:
       service_user: {{ pillar['supervisor']['service_user'] }}
       service_password: {{ pillar['supervisor']['service_password'] }}
     - require:
-      - pip: supervisor
+      - file: /etc/supervisor
+
 
 /etc/supervisor/conf.d:
   file.directory:

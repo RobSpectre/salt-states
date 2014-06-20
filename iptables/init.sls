@@ -1,4 +1,4 @@
-/etc/sysconfig/iptables.save:
+/etc/iptables.save:
   file:
     - managed
     - user: root
@@ -6,14 +6,12 @@
     - mode: 644
     - source: salt://iptables/iptables.save
     - template: jinja
-{% if salt['grains.get']('roles', []) %}
     - context:
-      roles: {{ salt['grains.get']('roles', []) }}
+      roles: {{ salt['grains.get']('roles', None) }}
       network: {{ pillar.get('network', None) }}
-{% endif %}
 
 Reload iptables:
   cmd.wait:
-    - name: iptables-restore < /etc/sysconfig/iptables.save
+    - name: iptables-restore < /etc/iptables.save
     - watch:
-      - file: /etc/sysconfig/iptables.save
+      - file: /etc/iptables.save
