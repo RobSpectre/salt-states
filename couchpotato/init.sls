@@ -4,6 +4,7 @@ couchpotato:
   git.latest:
     - name: git://github.com/RuudBurger/CouchPotatoServer.git
     - target: /home/{{ user.username }}/couchpotato
+    - rev: master
     - submodules: true
     - runas: {{ user.username }}
   service:

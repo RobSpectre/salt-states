@@ -31,6 +31,7 @@
   git.latest:
     - name: git://github.com/twilio/OpenVBX.git
     - target: /home/{{ pillar['openvbx']['user'] }}/{{ pillar['openvbx']['server_name'] }}
+    - rev: master
     - runas: www-data
     - require: 
       - group: {{ pillar['openvbx']['user'] }}

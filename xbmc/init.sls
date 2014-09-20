@@ -24,6 +24,16 @@ xbmc:
     - require:
       - pkg: xbmc
 
+/home/{{ user.username }}/.xbmc/userdata/RssFeeds.xml:
+  file.managed:
+    - source: salt://xbmc/RssFeeds.xml
+    - mode: 644
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - require:
+      - pkg: xbmc
+    
+
 /home/{{ user.username }}/.xbmc/userdata/sources.xml:
   file.managed:
     - source: salt://xbmc/sources.xml

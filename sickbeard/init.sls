@@ -9,6 +9,7 @@ sickbeard:
   git.latest:
     - name: git://github.com/midgetspy/Sick-Beard.git
     - target: /home/{{ user.username }}/sickbeard
+    - rev: master
     - submodules: true
     - user: {{ user.username }}
     - force_checkout: True

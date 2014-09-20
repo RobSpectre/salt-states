@@ -5,7 +5,7 @@
     - user: root
     - group: root
 
-/etc/apt/sources.list
+/etc/apt/sources.list:
   file.managed:
     - source: salt://apt/sources.list
     - mode: 644

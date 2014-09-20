@@ -67,11 +67,19 @@ base:
     - match: grain
     - named
     - dhcpd
+  'roles:backup_sync*':
+    - match: grain
+    - btsync
   'apps:votr':
     - match: grain
     - nginx
     - nodejs
     - couchdb
     - votr
+  'apps:stashtracker':
+    - match: grain
+    - nginx
+    - nodejs
+    - stashtracker
   'domaincontroller01.ghettopenthouse.pvt':
     - dns_ghettopenthouse

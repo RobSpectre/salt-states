@@ -86,6 +86,7 @@ ffmpeg-source:
   git.latest:
     - name: git://source.ffmpeg.org/ffmpeg
     - target: /opt/ffmpeg-source
+    - rev: release/2.2 
     - submodules: True
     - require:
       - pkgrepo: ffmpeg-ppa

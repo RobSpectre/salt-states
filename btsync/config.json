@@ -1,0 +1,38 @@
+{
+  "device_name": "{{ hostname }}",
+  "listening_port" : 0, // 0 - randomize port
+  "use_upnp" : false,
+  "download_limit" : 0,
+  "upload_limit" : 0,
+  "check_for_updates" : false,
+  "storage_path": "/home/btsync/.sync",
+  "webui" :
+  {
+    //"listen" : "0.0.0.0:8888", // remove field to disable WebUI
+    "login" : "{{ username }}",
+    "password_hash" : "{{ password_hash }}", // password hash in crypt(3) format
+    "directory_root" : "/home/btsync/Sync"
+  },
+  "shared_folders" :
+  [
+    {% if shared_folders %}
+    {% for folder in shared_folders %}
+    {
+      "secret" : "{{ folder.secret }}", // required field - use --generate-secret in command line to create new secret
+      "dir" : "/home/btsync/Sync/{{ folder.path }}", // * required field
+      "use_relay_server" : true, //  use relay server when direct connection fails
+      "use_tracker" : true,
+      "use_dht" : false,
+      "search_lan" : false,
+      "use_sync_trash" : true, // enable SyncArchive to store files deleted on remote devices
+      "overwrite_changes" : false // restore modified files to original version, ONLY for Read-Only folders
+    {% if not loop.last %}
+    },
+    {% else %}
+    }
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+  ]
+}
+

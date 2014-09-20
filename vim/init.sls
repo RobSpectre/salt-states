@@ -11,8 +11,7 @@ vim-vundle:
     - name: git://github.com/gmarik/vundle.git
     - rev: master
     - target: /home/{{ user.username }}/.vim/bundle/vundle
-    - submodules: true
-    - runas: {{ user.username }} 
+    - user: {{ user.username }} 
 {% endfor %}
 
 vim:
