@@ -1,4 +1,5 @@
 master: config01.brooklynhacker.com 
+startup_state: highstate
 
 schedule:
   highstate:
@@ -9,3 +10,4 @@ schedule:
     args:
       - 'ntpdate time.nist.gov'
     minutes: 60
+

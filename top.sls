@@ -8,6 +8,7 @@ base:
     - apt
     - salt
     - archive
+    - vulnerable_packages
   'environment:production':
     - match: grain
     - ssh.server
