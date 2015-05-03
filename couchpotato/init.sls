@@ -18,6 +18,15 @@ couchpotato:
       - git: couchpotato
       - file: /etc/init.d/couchpotato
 
+/home/{{ user.username }}/.couchpotato:
+  file.directory:
+    - file_mode: 755
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - require:
+      - git: couchpotato
+
 /home/{{ user.username }}/.couchpotato/settings.conf:
   file.managed:
     - source: salt://couchpotato/settings.conf
@@ -40,6 +49,7 @@ couchpotato:
       iptorrents_password: {{ user.iptorrents_password }}
     - require:
       - git: couchpotato
+      - file: /home/{{ user.username }}/.couchpotato
 {% endif %}
 {% endfor %}
 

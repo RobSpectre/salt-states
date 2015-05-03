@@ -1,0 +1,10 @@
+Django==1.7
+argparse==1.2.1
+django-phonenumber-field==0.6
+django-twilio==0.7.2
+httplib2==0.9
+phonenumbers==6.3.0
+six==1.8.0
+twilio==3.6.8
+wsgiref==0.1.2
+authy==2.1.2

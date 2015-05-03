@@ -1,0 +1,14 @@
+authtoken: {{ token }}
+tunnels:
+  flask:
+    proto: http
+    addr: 5000
+    hostname: tunnel.brooklynhacker.com
+  express:
+    proto: http
+    addr: 3000
+    hostname: tunnel.brooklynhacker.com
+  presentation:
+    proto: http
+    addr: 8000
+    hostname: tunnel.brooklynhacker.com

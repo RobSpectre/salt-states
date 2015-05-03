@@ -116,3 +116,8 @@ if [ -f ~/.bash_environment ]; then
     . ~/.bash_environment
 fi
 
+source /usr/local/bin/virtualenvwrapper.sh
+
+if [ -f /usr/local/nvm/nvm.sh ]; then
+    . /usr/local/nvm/nvm.sh
+fi

@@ -1,0 +1,2 @@
+ruby-full:
+  pkg.latest

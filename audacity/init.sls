@@ -1,0 +1,2 @@
+audacity:
+  pkg.latest

@@ -12,7 +12,7 @@ sickbeard:
     - rev: master
     - submodules: true
     - user: {{ user.username }}
-    - force_checkout: True
+    - force: True
     - require:
       - pip: cheetah
   service:
@@ -25,6 +25,15 @@ sickbeard:
     - require:
       - git: sickbeard 
       - file: /etc/init.d/sickbeard
+
+/home/{{ user.username }}/.sickbeard:
+  file.directory:
+    - file_mode: 755
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - require:
+      - git: sickbeard
 
 /home/{{ user.username }}/.sickbeard/config.ini:
   file.managed:
@@ -45,6 +54,7 @@ sickbeard:
       sabnzbd_apikey: {{ user.sabnzbd_apikey }}
     - require:
       - git: sickbeard
+      - file: /home/{{ user.username }}/.sickbeard
 
 /home/{{ user.username }}/sickbeard/autoProcessTV/autoProcessTV.cfg:
   file.managed:

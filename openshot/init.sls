@@ -1,0 +1,2 @@
+openshot:
+  pkg.latest

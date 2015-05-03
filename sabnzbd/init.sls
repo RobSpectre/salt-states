@@ -21,6 +21,15 @@ sabnzbdplus:
       - pkg: sabnzbdplus 
       - file: /etc/default/sabnzbdplus
 
+/home/{{ user.username }}/.sabnzbd:
+  file.directory:
+    - file_mode: 755
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - require:
+      - pkg: sabnzbdplus
+
 /home/{{ user.username }}/.sabnzbd/sabnzbd.ini:
   file.managed:
     - source: salt://sabnzbd/sabnzbd.ini
@@ -40,8 +49,10 @@ sabnzbdplus:
       astraweb_password: {{ user.astraweb_password }}
       nzbmatrix_apikey: {{ user.nzbmatrix_apikey }}
       nzbmatrix_userid: {{ user.nzbmatrix_userid }}
+      oznzb_apikey: {{ user.oznzb_apikey }}
     - require:
       - pkg: sabnzbdplus
+      - file: /home/{{ user.username }}/.sabnzbd
 {% endif %}
 {% endfor %}
 

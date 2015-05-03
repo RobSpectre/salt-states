@@ -1,0 +1,5 @@
+[user]
+    name = {{ fullname }}
+    email = {{ email_address }} 
+[core]
+    editor = vim

@@ -5,10 +5,12 @@ base:
     - vim
     - ssh
     - python
-    - apt
     - salt
     - archive
     - vulnerable_packages
+  'os:Ubuntu':
+    - match: grain
+    - apt
   'environment:production':
     - match: grain
     - ssh.server
@@ -18,10 +20,6 @@ base:
     - match: grain
     - ffmpeg
     - vlc
-  'apps:chickcam':
-    - match: grain
-    - chickcam
-    - nginx
   'apps:snowcam':
     - match: grain
     - snowcam
@@ -40,30 +38,35 @@ base:
   'roles:mediacenter':
     - match: grain
     - ssh.server
-    - xbmc
+    - kodi 
     - sabnzbd
     - couchpotato
     - sharedesktop
     - sickbeard
-    - nvidia
     - transmission
   'roles:desktop':
     - match: grain
     - pidgin
     - handbrake
-    - screencloud
-    - flash
+    - shutter 
     - audacity
     - openshot
-    - dropbox
     - heroku
     - synergy
     - gimp
-    - gmtp
     - ffmpeg
     - vlc
-    - dataanalysis
+    - btsync-gui
+    - python-dev
     - robrepos
+    - ruby
+    - nodejs
+    - ssh.server
+    - google-chrome
+    - btsync-gui
+    - gnome-terminal-colors-solarized
+    - ngrok
+    - hipchat
   'roles:domaincontroller':
     - match: grain
     - named
@@ -71,6 +74,9 @@ base:
   'roles:backup_sync*':
     - match: grain
     - btsync
+  'roles:web':
+    - match: grain
+    - nginx
   'apps:votr':
     - match: grain
     - nginx

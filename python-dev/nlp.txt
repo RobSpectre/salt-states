@@ -1,0 +1,5 @@
+Pattern==2.6
+argparse==1.2.1
+nltk==3.0.2
+textblob==0.9.0
+wsgiref==0.1.2

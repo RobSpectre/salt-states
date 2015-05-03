@@ -1,0 +1,2 @@
+shutter:
+  pkg.latest

@@ -1,12 +1,16 @@
 build-essential:
   pkg.latest
 
+python-software-properties:
+  pkg.latest
+
 packages:
   pkg.latest:
     - names:
       - python
       - python-dev
       - python-pip
+      - python-pycurl
     - require:
       - pkg: build-essential
       - service: salt-minion
@@ -54,6 +58,12 @@ pyflakes:
       - pip: virtualenv
 
 pep8:
+  pip.installed:
+    - upgrade: True
+    - require:
+      - pip: virtualenv
+
+flake8:
   pip.installed:
     - upgrade: True
     - require:

@@ -25,8 +25,16 @@ transmission-daemon:
       username: {{ user.username}}
       derp_username: {{ user.derp_username }} 
       derp_password: {{ user.derp_password }}
+    - require:
+      - file: /home/{{ user.username }}/.config
 
 /home/{{ user.username }}/torrents:
+  file.directory:
+    - mode: 644
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+
+/home/{{ user.username }}/.config:
   file.directory:
     - mode: 644
     - user: {{ user.username }}
@@ -37,6 +45,8 @@ transmission-daemon:
     - mode: 755 
     - user: {{ user.username }}
     - group: {{ user.username }}
+    - require:
+      - file: /home/{{ user.username }}/.config
 
 /etc/init.d/transmission-daemon:
   file.managed:

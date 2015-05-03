@@ -1,48 +1,49 @@
-xbmc_repository:
+kodi_repository:
   pkgrepo.managed:
     - ppa: team-xbmc/ppa
-    - require_in:
-      - pkg: xbmc
 
-xbmc:
+kodi:
   pkg.latest:
     - require:
-      - pkgrepo: xbmc_repository
+      - pkgrepo: kodi_repository
 
 {% for user in pillar.get('users', []) %}
-/home/{{ user.username }}/.xbmc/userdata/guisettings.xml:
+/home/{{ user.username }}/.kodi/userdata/guisettings.xml:
   file.managed:
-    - source: salt://xbmc/guisettings.xml
+    - source: salt://kodi/guisettings.xml
     - mode: 644
     - user: {{ user.username }}
     - group: {{ user.username }}
     - template: jinja
+    - makedirs: True
     - context:
         derp_username: {{ user.derp_username }}
         derp_password: {{ user.derp_password }}
         username: {{ user.username }}
     - require:
-      - pkg: xbmc
+      - pkg: kodi 
 
-/home/{{ user.username }}/.xbmc/userdata/RssFeeds.xml:
+/home/{{ user.username }}/.kodi/userdata/RssFeeds.xml:
   file.managed:
-    - source: salt://xbmc/RssFeeds.xml
+    - source: salt://kodi/RssFeeds.xml
     - mode: 644
     - user: {{ user.username }}
     - group: {{ user.username }}
+    - makedirs: True
     - require:
-      - pkg: xbmc
+      - pkg: kodi
     
 
-/home/{{ user.username }}/.xbmc/userdata/sources.xml:
+/home/{{ user.username }}/.kodi/userdata/sources.xml:
   file.managed:
-    - source: salt://xbmc/sources.xml
+    - source: salt://kodi/sources.xml
     - mode: 644
     - user: {{ user.username }}
     - group: {{ user.username }}
+    - makedirs: True
     - template: jinja
     - context:
         username: {{ user.username }}
     - require:
-      - pkg: xbmc
+      - pkg: kodi
 {% endfor %}

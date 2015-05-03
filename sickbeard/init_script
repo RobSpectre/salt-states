@@ -1,14 +1,5 @@
-#! /bin/sh
-
-# Author: daemox
-# Basis: Parts of the script based on and inspired by work from
-#       tret (sabnzbd.org), beckstown (xbmc.org),
-#       and midgetspy (sickbeard.com).
-# Fixes: Alek (ainer.org), James (ainer.org), Tophicles (ainer.org),
-#       croontje (sickbeard.com)
-# Contact: http://www.ainer.org
-# Version: 3.1
-
+#!/bin/sh
+#
 ### BEGIN INIT INFO
 # Provides:          sickbeard
 # Required-Start:    $local_fs $network $remote_fs
@@ -17,39 +8,138 @@
 # Should-Stop:       $NetworkManager
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: starts and stops sick beard
-# Description:       Sick Beard is an Usenet PVR. For more information see:
-#           http://www.sickbeard.com
+# Short-Description: starts instance of Sick Beard
+# Description:       starts instance of Sick Beard using start-stop-daemon
 ### END INIT INFO
- 
-#Required -- Must Be Changed!
-USER={{ username }} #Set Linux Mint, Ubuntu, or Debian user name here.
- 
-#Required -- Defaults Provided (only change if you know you need to).
-HOST="127.0.0.1" #Set Sick Beard address here.
-PORT="9667" #Set Sick Beard port here.
- 
-#Optional -- Unneeded unless you have added a user name and password to Sick Beard.
-SBUSR="{{ derp_username }}" #Set Sick Beard user name (if you use one) here.
-SBPWD="{{ derp_password }}" #Set Sick Beard password (if you use one) here.
- 
-#Script -- No changes needed below.
+
+# Source SickBeard configuration
+if [ -f /etc/default/sickbeard ]; then
+    . /etc/default/sickbeard
+else
+    echo "/etc/default/sickbeard not found using default settings.";
+fi
+
+# Script name
+NAME=sickbeard
+
+# App name
+DESC=SickBeard
+
+## Don't edit this file
+## Edit user configuation in /etc/default/sickbeard to change
+##
+SB_USER=rspectre         #$RUN_AS, username to run sickbeard under, the default is sickbeard
+SB_HOME=/home/rspectre/sickbeard         #$APP_PATH, the location of SickBeard.py, the default is /opt/sickbeard
+SB_DATA=/home/rspectre/sickbeard         #$DATA_DIR, the location of sickbeard.db, cache, logs, the default is /opt/sickbeard
+## SB_PIDFILE=      #$PID_FILE, the location of sickbeard.pid, the default is /var/run/sickbeard/sickbeard.pid
+## PYTHON_BIN=      #$DAEMON, the location of the python binary, the default is /usr/bin/python
+SB_OPTS=--config=/home/rspectre/.sickbeard/config.ini         #$EXTRA_DAEMON_OPTS, extra cli option for sickbeard, i.e. " --config=/home/sickbeard/config.ini"
+## SSD_OPTS=        #$EXTRA_SSD_OPTS, extra start-stop-daemon option like " --group=users"
+##
+## EXAMPLE if want to run as different user
+## add SB_USER=username to /etc/default/sickbeard
+## otherwise default sickbeard is used
+
+## The defaults
+# Run as username
+RUN_AS=${SB_USER-sickbeard}
+
+# Path to app SB_HOME=path_to_app_SickBeard.py
+APP_PATH=${SB_HOME-/opt/sickbeard}
+
+# Data directory where sickbeard.db, cache and logs are stored
+DATA_DIR=${SB_DATA-/opt/sickbeard}
+
+# Path to store PID file
+PID_FILE=${SB_PIDFILE-/var/run/sickbeard/sickbeard.pid}
+
+# path to python bin
+DAEMON=${PYTHON_BIN-/usr/bin/python}
+
+# Extra daemon option like: SB_OPTS=" --config=/home/sickbeard/config.ini"
+EXTRA_DAEMON_OPTS=${SB_OPTS-}
+
+# Extra start-stop-daemon option like START_OPTS=" --group=users"
+EXTRA_SSD_OPTS=${SSD_OPTS-}
+##
+
+PID_PATH=`dirname $PID_FILE`
+DAEMON_OPTS=" SickBeard.py -q --daemon --nolaunch --pidfile=${PID_FILE} --datadir=${DATA_DIR} ${EXTRA_DAEMON_OPTS}"
+
+##
+
+test -x $DAEMON || exit 0
+
+set -e
+
+# Create PID directory if not exist and ensure the SickBeard user can write to it
+if [ ! -d $PID_PATH ]; then
+    mkdir -p $PID_PATH
+    chown $RUN_AS $PID_PATH
+fi
+
+if [ ! -d $DATA_DIR ]; then
+    mkdir -p $DATA_DIR
+    chown $RUN_AS $DATA_DIR
+fi
+
+if [ -e $PID_FILE ]; then
+    PID=`cat $PID_FILE`
+    if ! kill -0 $PID > /dev/null 2>&1; then
+        echo "Removing stale $PID_FILE"
+        rm $PID_FILE
+    fi
+fi
+
 case "$1" in
-start)
-#Start Sick Beard and send all messages to /dev/null.
-cd /home/$USER/.sickbeard
-echo "Starting Sick Beard"
-sudo -u $USER -EH nohup python /home/$USER/sickbeard/SickBeard.py -q > /dev/null 2>&1 &
-;;
-stop)
-#Shutdown Sick Beard and delete the index.html files that wget generates.
-echo "Stopping Sick Beard"
-wget -q --user=$SBUSR --password=$SBPWD "http://$HOST:$PORT/home/shutdown/" --delete-after
-sleep 6s
-;;
-*)
-echo "Usage: $0 {start|stop}"
-exit 1
+    start)
+        echo "Starting $DESC"
+        start-stop-daemon -d $APP_PATH -c $RUN_AS $EXTRA_SSD_OPTS --start --pidfile $PID_FILE --exec $DAEMON -- $DAEMON_OPTS
+        ;;
+
+    stop)
+        echo "Stopping $DESC"
+        start-stop-daemon --stop --pidfile $PID_FILE --retry 15 --oknodo
+        ;;
+
+    restart|force-reload)
+        echo "Restarting $DESC"
+        start-stop-daemon --stop --pidfile $PID_FILE --retry 15 --oknodo
+        start-stop-daemon -d $APP_PATH -c $RUN_AS $EXTRA_SSD_OPTS --start --pidfile $PID_FILE --exec $DAEMON -- $DAEMON_OPTS
+        ;;
+
+    status)
+        # Use LSB function library if it exists
+        if [ -f /lib/lsb/init-functions ]; then
+            . /lib/lsb/init-functions
+
+            if [ -e $PID_FILE ]; then
+                status_of_proc -p $PID_FILE "$DAEMON" "$NAME" && exit 0 || exit $?
+            else
+                log_daemon_msg "$NAME is not running"
+                exit 3
+            fi
+
+        else
+        # Use basic functions
+            if [ -e $PID_FILE ]; then
+                PID=`cat $PID_FILE`
+                if kill -0 $PID > /dev/null 2>&1; then
+                    echo " * $NAME is running"
+                    exit 0
+                fi
+            else
+                echo " * $NAME is not running"
+                exit 3
+            fi
+        fi
+        ;;
+
+    *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+        exit 1
+        ;;
 esac
- 
+
 exit 0

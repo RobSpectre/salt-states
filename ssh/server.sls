@@ -11,8 +11,6 @@ ssh:
     - require:
       - pkg: openssh-client
       - pkg: openssh-server
-      - file: /etc/issue.net
-      - file: /etc/motd
 
 /etc/ssh/sshd_config:
   file.managed:
@@ -23,22 +21,24 @@ ssh:
     - require:
       - pkg: openssh-server
 
-/etc/issue.net:
+/etc/update-motd.d/10-help-text:
   file:
-    - managed
+    - absent
+
+/etc/update-motd.d/00-header:
+  file.managed:
     - user: root
     - group: root
-    - mode: 644
-    - source: salt://ssh/issue.net
+    - mode: 755 
+    - source: salt://ssh/header
     - require:
       - pkg: openssh-server
 
-/etc/motd:
-  file:
-    - managed
+/etc/motd.tail:
+  file.managed:
     - user: root
     - group: root
     - mode: 644
-    - source: salt://ssh/motd
+    - source: salt://ssh/motd.tail
     - require:
       - pkg: openssh-server

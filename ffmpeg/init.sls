@@ -5,12 +5,6 @@ old-versions-ffmpeg:
       - ffmpeg
       - yasm
 
-ffmpeg-ppa:
-  pkgrepo.managed:
-  - ppa: jon-severinsson/ffmpeg 
-  - require:
-    - pkg: old-versions-ffmpeg
-
 ffmpeg-deps:
   pkg.latest:
     - pkgs:
@@ -29,16 +23,15 @@ ffmpeg-deps:
       - texi2html
       - zlib1g-dev
       - libfaac-dev
-    - require:
-      - pkgrepo: ffmpeg-ppa
 
 yasm-tarball:
   file.managed:
     - name: /opt/yasm-source/yasm-1.2.0.tar.gz
     - source: http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz
     - source_hash: md5=4cfc0686cf5350dd1305c4d905eb55a6
+    - makedirs: True
     - require:
-      - pkgrepo: ffmpeg-ppa
+      - pkg: ffmpeg-deps 
 
 yasm-source:
   cmd.wait:
@@ -89,7 +82,7 @@ ffmpeg-source:
     - rev: release/2.2 
     - submodules: True
     - require:
-      - pkgrepo: ffmpeg-ppa
+      - pkg: ffmpeg-deps
 
 ffmpeg-configure:
   cmd.wait:
@@ -113,6 +106,7 @@ ffmpeg-build:
     - cwd: /opt/ffmpeg-source
     - require:
       - git: ffmpeg-source
+      - cmd: ffmpeg-configure
     - watch:
       - cmd: ffmpeg-configure
 

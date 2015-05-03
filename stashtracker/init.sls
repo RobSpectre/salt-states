@@ -42,7 +42,7 @@ stashtracker-supervisord:
 
 stashtracker-code:
   git.latest:
-    - name: git://github.com/RobSpectre/Realtime-MMS-Photostream
+    - name: git://github.com/RobSpectre/Stash-Tracker
     - target: /home/stashtracker/stashtracker
     - rev: master
     - user: stashtracker

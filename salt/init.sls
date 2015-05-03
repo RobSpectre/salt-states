@@ -18,6 +18,8 @@ swig:
     - group: root
 
 salt-minion:
+  pkg:
+    - latest
   service.running:
     - enable: True
     - watch:

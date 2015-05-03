@@ -8,8 +8,11 @@ vim-deps:
 {% for user in pillar.get('users', []) %}
 vim-vundle:
   git.latest:
-    - name: git://github.com/gmarik/vundle.git
+    - name: git://github.com/gmarik/Vundle.vim.git
     - rev: master
+    - remote_name: origin
+    - always_fetch: True
+    - force_checkout: True
     - target: /home/{{ user.username }}/.vim/bundle/vundle
     - user: {{ user.username }} 
 {% endfor %}
