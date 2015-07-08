@@ -118,6 +118,6 @@ fi
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-if [ -f /usr/local/nvm/nvm.sh ]; then
-    . /usr/local/nvm/nvm.sh
+if [ -f ~/.nvm/nvm.sh ]; then
+    . ~/.nvm/nvm.sh
 fi

@@ -17,7 +17,7 @@ transmission-daemon:
 /home/{{ user.username }}/.config/transmission-daemon/settings.json:
   file.managed:
     - source: salt://transmission/settings.json
-    - mode: 644
+    - mode: 755 
     - user: {{ user.username }}
     - group: {{ user.username }}
     - template: jinja
@@ -30,13 +30,13 @@ transmission-daemon:
 
 /home/{{ user.username }}/torrents:
   file.directory:
-    - mode: 644
+    - mode: 755 
     - user: {{ user.username }}
     - group: {{ user.username }}
 
 /home/{{ user.username }}/.config:
   file.directory:
-    - mode: 644
+    - mode: 755 
     - user: {{ user.username }}
     - group: {{ user.username }}
 
@@ -45,12 +45,36 @@ transmission-daemon:
     - mode: 755 
     - user: {{ user.username }}
     - group: {{ user.username }}
+    - recurse:
+      - user
+      - group
+      - mode
     - require:
       - file: /home/{{ user.username }}/.config
 
 /etc/init.d/transmission-daemon:
   file.managed:
     - source: salt://transmission/init_script
+    - mode: 755
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      username: {{ user.username }}
+
+/etc/init/transmission-daemon.conf:
+  file.managed:
+    - source: salt://transmission/init_script.conf
+    - mode: 755
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      username: {{ user.username }}
+
+/etc/default/transmission-daemon:
+  file.managed:
+    - source: salt://transmission/systemd.conf
     - mode: 755
     - user: root
     - group: root

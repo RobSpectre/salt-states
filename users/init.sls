@@ -33,6 +33,15 @@
     - require:
       - file: /home/{{ user.username }}
 
+/home/{{ user.username }}/.bashrc:
+  file.managed:
+    - source: salt://users/.bash_profile
+    - mode: 644
+    - user: {{ user.username }}
+    - group: {{ user.username }}
+    - require:
+      - file: /home/{{ user.username }}
+
 {% if user.get('environment_variables', None) %}
 /home/{{ user.username }}/.bash_environment:
   file.managed:

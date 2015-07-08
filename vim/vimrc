@@ -25,6 +25,7 @@ Bundle 'guileen/vim-node'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -54,6 +55,13 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+" Filetype specific
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype coffeescript setlocal ts=2 sw=2 expandtab
+autocmd Filetype jade setlocal ts=2 sw=2 expandtab
+
 " Pytest
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
 nmap <silent><Leader>tc <Esc>:Pytest class<CR>
@@ -61,3 +69,7 @@ nmap <silent><Leader>tm <Esc>:Pytest method<CR>
 
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E501,E225,W601,E128'
+
+" Fix airline visibility
+set laststatus=2
+let g:airline_powerline_fonts = 1
