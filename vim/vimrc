@@ -72,4 +72,3 @@ let g:syntastic_python_flake8_args='--ignore=E501,E225,W601,E128'
 
 " Fix airline visibility
 set laststatus=2
-let g:airline_powerline_fonts = 1

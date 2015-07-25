@@ -88,5 +88,9 @@ base:
     - nginx
     - nodejs
     - stashtracker
+  'apps:slackbot':
+    - match: grain
+    - supervisor
+    - slackbot
   'domaincontroller01.ghettopenthouse.pvt':
     - dns_ghettopenthouse

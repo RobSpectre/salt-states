@@ -1,4 +1,12 @@
 {% if pillar.get('supervisor', None) %}
+
+supervisor-deps:
+  pip.installed:
+    - upgrade: True
+    - names:
+      - meld3
+      - distribute
+
 supervisor:
   pip.installed:
     - require:
