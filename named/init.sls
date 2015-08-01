@@ -1,12 +1,18 @@
+bind:
+  user.present:                      
+    - fullname: BIND 
+    - gid_from_name: True
+    - shell: /sbin/nologin
+  group:                        
+    - present              
+
 named:
   pkg.latest:
     - pkgs:
       - bind9
       - dnsutils
-    - require:
-      - file: named-conf-primary
-      - file: named-conf-options
-      - file: named-conf-defaultzones
+
+named-service:
   service.running:
     - name: bind9
     - enable: True

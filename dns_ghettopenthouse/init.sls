@@ -6,7 +6,7 @@ named-conf-local:
     - mode: 644
     - user: bind 
     - group: bind
-    - require_in:
+    - require:
       - pkg: named
     - template: jinja
     - context:
@@ -21,7 +21,7 @@ named-conf-local:
     - mode: 644
     - user: bind
     - group: bind
-    - require_in:
+    - require:
       - pkg: named
     - template: jinja
     - context:
@@ -36,7 +36,7 @@ revp.{{ pillar['network']['range_zone'] }}.in-addr.arpa:
     - mode: 644
     - user: bind
     - group: bind
-    - require_in:
+    - require:
       - pkg: named
     - template: jinja
     - context:
@@ -52,5 +52,21 @@ usr.sbin.dhcpd:
     - mode: 644
     - user: root 
     - group: root
-    - require_in:
+    - require:
       - pkg: dhcpd 
+
+/etc/bind/rndc.key:
+  file.managed:
+    - mode: 660
+    - user: bind
+    - group: bind
+    - require:
+      - pkg: named
+
+add-dhcp-to-bind-group:
+  group.present:
+    - name: bind
+    - addusers:
+      - dhcpd
+    - require:
+      - pkg: dhcpd
