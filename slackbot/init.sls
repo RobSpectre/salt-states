@@ -30,6 +30,7 @@ slackbot:
   virtualenv.managed:
     - system_site_packages: False
     - python: /usr/bin/python3.4
+    - user: slackbot
     - requirements: salt://slackbot/requirements.txt
 
 /opt/slackbot/config.py:
@@ -74,3 +75,36 @@ slackbot-supervisord:
     - watch:
       - virtualenv: /opt/slackbot/venv 
       - file: slackbot-supervisord-conf 
+
+slackbot-nginx-conf:
+  file.managed:
+    - name: /etc/nginx/sites-available/slackbot.conf
+    - source: salt://slackbot/nginx.conf
+    - mode: 600
+    - user: root
+    - group: root
+    - template: jinja
+    - require:
+      - supervisord: slackbot-supervisord
+
+/etc/nginx/sites-enabled/slackbot:
+  file.symlink:
+    - target: /etc/nginx/sites-available/slackbot.conf
+    - require:
+      - file: slackbot-nginx-conf
+    - watch_in:
+      - service: nginx
+
+bot-configuration:
+  file.managed:
+    - name: /opt/slackbot/backup.py
+    - source: salt://slackbot/backup.py
+    - mode: 600
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      twilio_account_sid: {{ pillar['twilio']['account_sid'] }} 
+      twilio_auth_token: {{ pillar['twilio']['auth_token'] }}
+    - require:
+      - supervisord: slackbot-supervisord

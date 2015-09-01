@@ -92,3 +92,9 @@ GitPython:
     - upgrade: True
     - require:
       - pip: virtualenv
+
+pip:
+  pip.installed:
+    - upgrade: True
+    - require:
+      - pip: virtualenv

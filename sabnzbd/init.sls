@@ -49,7 +49,7 @@ sabnzbdplus:
       astraweb_password: {{ user.astraweb_password }}
       nzbmatrix_apikey: {{ user.nzbmatrix_apikey }}
       nzbmatrix_userid: {{ user.nzbmatrix_userid }}
-      oznzb_apikey: {{ user.oznzb_apikey }}
+      ozbnzb_apikey: {{ user.ozbnzb_apikey }}
     - require:
       - pkg: sabnzbdplus
       - file: /home/{{ user.username }}/.sabnzbd

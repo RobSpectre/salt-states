@@ -6,7 +6,7 @@ couchpotato:
     - target: /home/{{ user.username }}/couchpotato
     - rev: master
     - submodules: true
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
   service:
     - running
     - enable: True

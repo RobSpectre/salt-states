@@ -91,6 +91,7 @@ base:
   'apps:slackbot':
     - match: grain
     - supervisor
+    - nginx
     - slackbot
   'domaincontroller01.ghettopenthouse.pvt':
     - dns_ghettopenthouse
