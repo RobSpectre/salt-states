@@ -19,8 +19,8 @@ stashtracker-supervisord-conf:
     - group: root
     - template: jinja
     - context:
-      account_sid: {{ pillar['twilio']['account_sid'] }} 
-      auth_token: {{ pillar['twilio']['auth_token'] }}
+      account_sid: {{ pillar['stashtracker']['account_sid'] }} 
+      auth_token: {{ pillar['stashtracker']['auth_token'] }}
       caller_id: {{ pillar['stashtracker']['caller_id'] }}
     - require:
       - pip: supervisor

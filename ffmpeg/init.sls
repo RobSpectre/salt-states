@@ -81,6 +81,7 @@ ffmpeg-source:
     - target: /opt/ffmpeg-source
     - rev: release/2.2 
     - submodules: True
+    - force_clone: True
     - require:
       - pkg: ffmpeg-deps
 

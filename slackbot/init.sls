@@ -97,7 +97,7 @@ slackbot-nginx-conf:
 
 bot-configuration:
   file.managed:
-    - name: /opt/slackbot/backup.py
+    - name: /opt/slackbot/plugins/backup.py
     - source: salt://slackbot/backup.py
     - mode: 600
     - user: root

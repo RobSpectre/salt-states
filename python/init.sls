@@ -98,3 +98,9 @@ pip:
     - upgrade: True
     - require:
       - pip: virtualenv
+
+pytest:
+  pip.installed:
+    - upgrade: True
+    - require:
+      - pip: virtualenv
