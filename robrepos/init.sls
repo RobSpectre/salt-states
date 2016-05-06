@@ -17,7 +17,7 @@ repo_talks:
     - target: /home/{{ user.username }}/workspace/Talks
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -27,7 +27,7 @@ repo_reveal_template:
     - target: /home/{{ user.username }}/workspace/Twilio Reveal Template
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -37,7 +37,7 @@ repo_stash_tracker:
     - target: /home/{{ user.username }}/workspace/Stash Tracker
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -47,7 +47,7 @@ repo_hackpack:
     - target: /home/{{ user.username }}/workspace/hackpack
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -57,7 +57,7 @@ repo_motionalert:
     - target: /home/{{ user.username }}/workspace/motionalert
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -67,7 +67,7 @@ repo_mustacher:
     - target: /home/{{ user.username }}/workspace/Mustached Message Service
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -77,7 +77,7 @@ repo_caesar_cipher:
     - target: /home/{{ user.username }}/workspace/caesarcipher
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -87,7 +87,7 @@ repo_ratmap:
     - target: /home/{{ user.username }}/workspace/NYC Rat Heat Map
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 
@@ -97,7 +97,7 @@ repo_jeterfilter:
     - target: /home/{{ user.username }}/workspace/Jeter Filter
     - rev: master
     - submodules: True
-    - runas: {{ user.username }}
+    - user: {{ user.username }}
     - require:
       - file: /home/{{ user.username }}/workspace
 {% endif %}

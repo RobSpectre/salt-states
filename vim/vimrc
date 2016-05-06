@@ -26,6 +26,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'mattn/emmet-vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'

@@ -20,7 +20,6 @@ ipykernel==4.2.2
 ipython==4.1.0rc1
 ipython-genutils==0.1.0
 ipywidgets==4.1.1
-jdcal==1.0
 Jinja2==2.7.1
 jsonschema==2.5.1
 jupyter==1.0.0

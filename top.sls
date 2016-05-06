@@ -43,7 +43,7 @@ base:
     - couchpotato
     - sharedesktop
     - sickbeard
-    - transmission
+    - deluge
   'roles:desktop':
     - match: grain
     - pidgin
@@ -66,7 +66,7 @@ base:
     - btsync-gui
     - gnome-terminal-colors-solarized
     - ngrok
-    - hipchat
+    - xchat
   'roles:domaincontroller':
     - match: grain
     - named
@@ -93,5 +93,14 @@ base:
     - supervisor
     - nginx
     - slackbot
-  'domaincontroller01.ghettopenthouse.pvt':
+  'domaincontroller01':
     - dns_ghettopenthouse
+  'apps:adcap.biz':
+    - match: grain
+    - python
+    - supervisor
+    - nginx 
+    - postgres
+    - redis
+    - elasticsearch
+    - adcap

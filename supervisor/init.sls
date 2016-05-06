@@ -5,7 +5,7 @@ supervisor-deps:
     - upgrade: True
     - names:
       - meld3
-      - distribute
+      - setuptools
 
 supervisor:
   pip.installed:

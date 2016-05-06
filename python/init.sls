@@ -9,6 +9,8 @@ packages:
     - names:
       - python
       - python-dev
+      - python3.4
+      - python3.4-dev
       - python-pip
       - python-pycurl
     - require:
