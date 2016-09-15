@@ -50,6 +50,8 @@ sabnzbdplus:
       nzbmatrix_apikey: {{ user.nzbmatrix_apikey }}
       nzbmatrix_userid: {{ user.nzbmatrix_userid }}
       ozbnzb_apikey: {{ user.ozbnzb_apikey }}
+      newshosting_username: {{ user.newshosting_username }}
+      newshosting_password: {{ user.newshosting_password }}
     - require:
       - pkg: sabnzbdplus
       - file: /home/{{ user.username }}/.sabnzbd

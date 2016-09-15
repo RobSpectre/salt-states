@@ -7,6 +7,8 @@ couchpotato:
     - rev: master
     - submodules: true
     - user: {{ user.username }}
+    - require:
+      - file: /home/{{ user.username }}/couchpotato
   service:
     - running
     - enable: True
@@ -17,6 +19,13 @@ couchpotato:
     - require:
       - git: couchpotato
       - file: /etc/init.d/couchpotato
+
+/home/{{ user.username }}/couchpotato:
+  file.directory:
+    - file_mode: 755
+    - dir_mode: 755
+    - user: {{ user.username }}
+    - group: {{ user.username }}
 
 /home/{{ user.username }}/.couchpotato:
   file.directory:

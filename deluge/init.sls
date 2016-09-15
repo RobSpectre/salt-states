@@ -3,11 +3,18 @@
 transmission:
   pkg.removed
 
+deluge-ppa:
+  pkgrepo.managed:
+    - ppa: deluge-team/ppa
+
 deluge-daemon:
   pkg.latest:
     - names:
       - deluged
       - deluge-webui
+      - deluge-console
+    - require:
+      - pkgrepo: deluge-ppa
   service.running:
     - enable: True
     - require:

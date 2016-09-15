@@ -17,29 +17,35 @@ packages:
       - pkg: build-essential
       - service: salt-minion
 
-/usr/local/bin/check_pip_version.py:
-  file.managed:
-    - source: salt://python/check_pip_version.py
-    - mode: 644
-    - user: root
-    - group: root
+#/usr/local/bin/check_pip_version.py:
+#  file.managed:
+#    - source: salt://python/check_pip_version.py
+#    - mode: 644
+#    - user: root
+#    - group: root
+#    - require:
+#      - pkg: python-pip
+
+#Check pip version:
+#  cmd.run:
+#    - name: python check_pip_version.py
+#    - cwd: /usr/local/bin
+#    - stateful: True
+#    - require:
+#      - pkg: python-pip
+
+#Upgrade pip:
+#  cmd.wait:
+#    - name: pip install --upgrade pip
+#    - cwd: /tmp
+#    - watch:
+#      - cmd: Check pip version
+
+lock-pip:
+  pip.installed:
+    - name: pip == 8.1.1
     - require:
       - pkg: python-pip
-
-Check pip version:
-  cmd.run:
-    - name: python check_pip_version.py
-    - cwd: /usr/local/bin
-    - stateful: True
-    - require:
-      - pkg: python-pip
-
-Upgrade pip:
-  cmd.wait:
-    - name: pip install --upgrade pip
-    - cwd: /tmp
-    - watch:
-      - cmd: Check pip version
 
 virtualenv:
   pip.installed:
@@ -90,12 +96,6 @@ twilio:
       - pip: virtualenv
 
 GitPython:
-  pip.installed:
-    - upgrade: True
-    - require:
-      - pip: virtualenv
-
-pip:
   pip.installed:
     - upgrade: True
     - require:

@@ -25,7 +25,7 @@ adcap:
   git.latest:
     - name: git://github.com/AdventureCapitalists/website
     - target: /opt/adcap.biz
-    - rev: wagtail-migration
+    - rev: master 
     - submodules: True
     - user: adcap
     - require:

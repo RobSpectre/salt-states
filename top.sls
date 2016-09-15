@@ -66,7 +66,6 @@ base:
     - btsync-gui
     - gnome-terminal-colors-solarized
     - ngrok
-    - xchat
   'roles:domaincontroller':
     - match: grain
     - named

@@ -27,6 +27,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-scripts/indentpython.vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -48,10 +49,10 @@ colorscheme solarized
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=80
-set smarttab
+set textwidth=79
 set expandtab
 set autoindent
+set fileformat=unix
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
@@ -73,3 +74,10 @@ let g:syntastic_python_flake8_args='--ignore=E501,E225,W601,E128'
 
 " Fix airline visibility
 set laststatus=2
+
+set diffopt+=vertical
+
+
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
