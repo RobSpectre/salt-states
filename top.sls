@@ -103,3 +103,10 @@ base:
     - redis
     - elasticsearch
     - adcap
+  'apps:humantrafficking.tips':
+    - match: grain
+    - python
+    - supervisor
+    - nginx
+    - postgres
+    - humantrafficking
