@@ -78,6 +78,6 @@ set laststatus=2
 set diffopt+=vertical
 
 
-:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorLine   cterm=NONE ctermbg=green ctermfg=white guibg=darkgrey guifg=white
+:hi CursorColumn cterm=NONE ctermbg=green ctermfg=white guibg=darkgrey guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
