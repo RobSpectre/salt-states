@@ -109,4 +109,5 @@ base:
     - supervisor
     - nginx
     - postgres
+    - rabbitmq
     - humantrafficking

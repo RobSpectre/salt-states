@@ -11,6 +11,7 @@ humantrafficking:
       - pkg: nginx
       - pkg: postgres
       - pip: supervisor
+      - pkg: rabbitmq
   git.latest:
     - name: git://github.com/RobSpectre/humantrafficking.tips
     - target: /opt/humantrafficking.tips
@@ -38,7 +39,11 @@ humantrafficking-app-conf:
     - group: humantrafficking 
     - template: jinja
     - context:
-      admins: {{ pillar['admins'] }}
+      {% if grains['admins'] %}
+      admins: {{ grains['admins'] }}
+      {% else %}
+      admins: None
+      {% endif %}
       db_name: {{ pillar['database']['user']['name'] }}
       db_password: {{ pillar['database']['user']['password'] }}
       db_user: {{ pillar['database']['user']['name'] }}
