@@ -16,6 +16,20 @@ ipython-dependencies:
       - libpq-dev
       - libhdf5-dev
       - python2.7
+      - python3.4
+      - python3.5
+      - libhdf5-dev
+      - hdf5-tools
+      - hdf5-helpers
+      - h5utils
+      - libffi6
+      - libffi-dev
+      - libssl-dev
+      {% if grains['lsb_distrib_codename'] == 'xenial' %} 
+      - libhdf5-10
+      {% else %}
+      - libhdf5-7
+      {% endif %}
     - require:
       - pkgrepo: deadsnakes-ppa
 
@@ -79,6 +93,7 @@ ipython-dependencies:
     - requirements: salt://python-dev/ipython-deps.txt
     - require:
       - pkgrepo: deadsnakes-ppa
+      - pkg: ipython-dependencies
       - file: /home/{{ user.username }}/.virtualenvs
 
 statsmodel-deps:

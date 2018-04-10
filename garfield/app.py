@@ -53,7 +53,7 @@ LOGGING = {
         # Log to a text file that can be rotated by logrotate
         'logfile': {
             'class': 'logging.handlers.WatchedFileHandler',
-            'filename': '/opt/humantrafficking.tips/log/humantrafficking.tips_application_error.log'
+            'filename': '/opt/garfield/log/garfield_application_error.log'
         },
     },
     'loggers': {
@@ -78,8 +78,12 @@ LOGGING = {
     },
 }
 
+STATIC_ROOT = "/opt/garfield/static"
+
 {% if twilio %}
 TWILIO_ACCOUNT_SID = "{{ twilio.account_sid }}"
 TWILIO_AUTH_TOKEN = "{{ twilio.auth_token }}"
-TWILIO_PHONE_NUMBER = "{{ twilio.phone_number }}"
+TWILIO_PHONE_NUMBER = "+{{ twilio.phone_number }}"
+TWILIO_APP_SID = "{{ twilio.app_sid }}"
+TELLFINDER_API_KEY = "{{ tellfinder.api_key }}"
 {% endif %}

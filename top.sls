@@ -56,14 +56,11 @@ base:
     - gimp
     - ffmpeg
     - vlc
-    - btsync-gui
     - python-dev
     - robrepos
     - ruby
     - nodejs
     - ssh.server
-    - google-chrome
-    - btsync-gui
     - gnome-terminal-colors-solarized
     - ngrok
   'roles:domaincontroller':
@@ -72,7 +69,6 @@ base:
     - dhcpd
   'roles:backup_sync*':
     - match: grain
-    - btsync
   'roles:web':
     - match: grain
     - nginx
@@ -111,3 +107,20 @@ base:
     - postgres
     - rabbitmq
     - humantrafficking
+  'apps:garfield':
+    - match: grain
+    - python
+    - python-dev
+    - supervisor
+    - nginx
+    - postgres
+    - rabbitmq
+    - garfield
+  'apps:childsafe.io':
+    - match: grain
+    - python
+    - supervisor
+    - nginx
+    - postgres
+    - rabbitmq
+    - childsafe

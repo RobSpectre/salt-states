@@ -52,6 +52,8 @@ sickbeard:
       sabnzbd_username: {{ user.sabnzbd_username }}
       sabnzbd_password: {{ user.sabnzbd_password }}
       sabnzbd_apikey: {{ user.sabnzbd_apikey }}
+      oznzb_apikey: {{ user.oznzb_apikey }}
+      nzbsu_apikey: {{ user.nzbsu_apikey }}
     - require:
       - git: sickbeard
       - file: /home/{{ user.username }}/.sickbeard

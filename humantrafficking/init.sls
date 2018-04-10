@@ -39,8 +39,8 @@ humantrafficking-app-conf:
     - group: humantrafficking 
     - template: jinja
     - context:
-      {% if grains['admins'] %}
-      admins: {{ grains['admins'] }}
+      {% if pillar['admins'] %}
+      admins: {{ pillar['admins'] }}
       {% else %}
       admins: None
       {% endif %}
@@ -52,6 +52,10 @@ humantrafficking-app-conf:
       email_user: {{ pillar['email']['user'] }}
       email_host: {{ pillar['email']['host'] }}
       email_password: {{ pillar['email']['password'] }}
+      twilio:
+        account_sid: {{ pillar['twilio']['account_sid'] }}
+        auth_token: {{ pillar['twilio']['auth_token'] }}
+        phone_number: {{ pillar['twilio']['phone_number'] }}
     - require:
       - git: humantrafficking 
 

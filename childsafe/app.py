@@ -11,10 +11,11 @@ DATABASES = {
 
 DEBUG = False
 
+STATIC_ROOT = "/opt/childsafe.io/static/"
+
 SECRET_KEY = '{{ cookie_key }}'
 NEVERCACHE_KEY = "{{ never_cache_key }}"
 
-ALLOWED_HOSTS = "*"
 
 EMAIL_HOST_USER = '{{ email_user }}'
 EMAIL_USE_TLS = True
@@ -53,7 +54,7 @@ LOGGING = {
         # Log to a text file that can be rotated by logrotate
         'logfile': {
             'class': 'logging.handlers.WatchedFileHandler',
-            'filename': '/opt/humantrafficking.tips/log/humantrafficking.tips_application_error.log'
+            'filename': '/opt/childsafe.io/log/childsafe.io_application_error.log'
         },
     },
     'loggers': {
@@ -75,11 +76,21 @@ LOGGING = {
             'level': 'DEBUG', # Or maybe INFO or WARNING
             'propagate': False
         },
-    },
+    }
 }
+
+ALLOWED_HOSTS = ['childsafe.io', 'www.childsafe.io']
 
 {% if twilio %}
 TWILIO_ACCOUNT_SID = "{{ twilio.account_sid }}"
 TWILIO_AUTH_TOKEN = "{{ twilio.auth_token }}"
 TWILIO_PHONE_NUMBER = "{{ twilio.phone_number }}"
+{% endif %}
+
+{% if tellfinder %}
+TELLFINDER_API_KEY = "{{ tellfinder.api_key}}"
+{% endif %}
+
+{% if clarifai %}
+CLARIFAI_API_KEY = "{{ clarifai.api_key }}"
 {% endif %}

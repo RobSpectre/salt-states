@@ -1,5 +1,5 @@
 swig:
-  pkg.latest:
+  pkg.installed:
     - require_in:
       - service: salt-minion
 
@@ -18,8 +18,8 @@ swig:
     - group: root
 
 salt-minion:
-  pkg:
-    - latest
+  pkg.installed:
+    - version: 2016.11.5
   service.running:
     - enable: True
     - watch:

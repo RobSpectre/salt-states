@@ -2,9 +2,10 @@ ngrok:
   archive.extracted:
     - archive_format: zip
     - name: /usr/local/bin/
-    - source: https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip
-    - source_hash: md5=fcf800f4a6ef8b9042adf77c669976c5
+    - source: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+    - source_hash: md5=8affd156889004688f78c176bf1878a2
     - if_missing: /usr/local/bin/ngrok 
+    - enforce_toplevel: False
 
 {% for user in pillar.get('users', []) %}
 {% if user.get('ngrok_key', None) %}
