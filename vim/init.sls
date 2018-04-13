@@ -10,8 +10,6 @@ vim-vundle:
   git.latest:
     - name: git://github.com/gmarik/Vundle.vim.git
     - rev: master
-    - remote_name: origin
-    - always_fetch: True
     - force_checkout: True
     - target: /home/{{ user.username }}/.vim/bundle/vundle
     - user: {{ user.username }} 

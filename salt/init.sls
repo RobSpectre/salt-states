@@ -18,8 +18,6 @@ swig:
     - group: root
 
 salt-minion:
-  pkg.installed:
-    - version: 2016.11.5
   service.running:
     - enable: True
     - watch:

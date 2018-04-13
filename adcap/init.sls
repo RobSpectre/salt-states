@@ -33,7 +33,7 @@ adcap:
   virtualenv.managed:
     - name: /opt/adcap.biz/venv
     - system_site_packages: False
-    - python: python3.4 
+    - python: python3.5 
     - requirements: /opt/adcap.biz/requirements.txt
     - user: adcap
     - require:

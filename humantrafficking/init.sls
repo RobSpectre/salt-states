@@ -24,7 +24,7 @@ humantrafficking:
   virtualenv.managed:
     - name: /opt/humantrafficking.tips/venv
     - system_site_packages: False
-    - python: python3.4 
+    - python: python3.5 
     - requirements: /opt/humantrafficking.tips/requirements.txt
     - user: humantrafficking 
     - require:

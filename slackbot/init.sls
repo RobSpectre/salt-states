@@ -2,8 +2,8 @@ slackbot-deps:
   pkg.latest:
     - pkgs:
       - libffi-dev 
-      - python3.4
-      - python3.4-dev
+      - python3.5
+      - python3.5-dev
 
 slackbot:
   user.present:

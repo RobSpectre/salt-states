@@ -58,7 +58,7 @@ garfield-app-conf:
         phone_number: {{ pillar['twilio']['phone_number'] }}
         app_sid: {{ pillar['twilio']['app_sid'] }}
       tellfinder:
-        api_key {{ pillar['tellfinder']['api_key'] }}
+        api_key: {{ pillar['tellfinder']['api_key'] }}
     - require:
       - git: garfield 
 
@@ -69,8 +69,12 @@ garfield-nginx-conf:
     - mode: 644
     - user: root
     - group: root
+    - template: jinja
+    - context:
+      fqdn: {{ grains['fqdn'] }}
     - require:
       - pkg: nginx
+      - cmd: letsencrypt-{{ grains['fqdn'] }}
 
 garfield-app-directory:
   file.directory:
@@ -80,28 +84,6 @@ garfield-app-directory:
     - group: garfield 
     - require:
       - user: garfield 
-
-garfield-server-cert:
-  file.managed:
-    - name: /etc/nginx/garfield.crt
-    - contents: |
-        {{ pillar['sslcerts']['server-cert'] | indent(8) }}
-    - mode: 600
-    - user: root
-    - group: root
-    - require:
-      - pkg: nginx
-
-garfield-server-key:
-  file.managed:
-    - name: /etc/nginx/garfield.key
-    - contents: |
-        {{ pillar['sslcerts']['server-key'] | indent(8) }}
-    - mode: 600
-    - user: root
-    - group: root
-    - require:
-      - pkg: nginx
 
 garfield-gunicorn-conf:
   file.managed:
@@ -157,7 +139,7 @@ garfield-gunicorn:
 
 garfield-psycopg2:
   pip.installed:
-    - name: psycopg2 
+    - name: psycopg2-binary
     - upgrade: True
     - bin_env: /opt/garfield/venv
     - require:
@@ -187,11 +169,35 @@ garfield-supervisord:
       - service: postgres
       - file: garfield-app-conf
       - file: garfield-gunicorn-conf
+      - postgres_database: garfield-postgres-database
     - watch:
       - pip: supervisor
       - git: garfield 
       - file: garfield-supervisord-config
       - file: garfield-app-conf
+
+celery-supervisord:
+  supervisord.running:
+    - name: celery_garfield
+    - update: True
+    - restart: True
+    - config_file: /etc/supervisor/supervisord.conf
+    - require:
+      - pip: supervisor
+      - file: garfield-supervisord-config
+      - git: garfield 
+      - virtualenv: garfield 
+      - service: postgres
+      - supervisord: garfield-supervisord
+      - file: garfield-app-conf
+      - file: garfield-gunicorn-conf
+      - postgres_database: garfield-postgres-database
+    - watch:
+      - pip: supervisor
+      - git: garfield 
+      - file: garfield-supervisord-config
+      - file: garfield-app-conf
+    
 
 garfield-migrate:
   cmd.run:
@@ -252,3 +258,24 @@ garfield-live:
       - pip: garfield-psycopg2
       - pip: garfield-gunicorn
       - file: garfield-app-conf
+
+letsencrypt-{{ grains['fqdn'] }}:
+  cmd.run:
+    - name: >
+             /opt/letsencrypt/bin/letsencrypt certonly --renew-by-default --standalone -d {{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }}
+    - creates: /etc/letsencrypt/live/{{ grains['fqdn'] }}/fullchain.pem
+    - require:
+      - pip: letsencrypt
+    - require_in:
+      - pkg: nginx
+
+renew-cert-for-{{ grains['fqdn'] }}:
+  cron.present:
+    - name: >
+         /opt/letsencrypt/bin/letsencrypt certonly --webroot -w /opt/garfield/static -d {{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }} 
+    - identifier: renew-cert-for-{{ grains['fqdn'] }}
+    - daymonth: 1
+    - hour: 10
+    - minute: 0
+    - require:
+      - cmd: letsencrypt-{{ grains['fqdn'] }}

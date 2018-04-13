@@ -25,7 +25,7 @@ childsafe:
   virtualenv.managed:
     - name: /opt/childsafe.io/venv
     - system_site_packages: False
-    - python: python3.4 
+    - python: python3.5 
     - requirements: /opt/childsafe.io/requirements.txt
     - user: childsafe
     - require:

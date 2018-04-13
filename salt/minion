@@ -1,4 +1,4 @@
-master: config01.brooklynhacker.com 
+master: config02.brooklynhacker.com 
 startup_state: highstate
 
 schedule:

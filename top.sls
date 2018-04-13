@@ -16,6 +16,7 @@ base:
     - ssh.server
     - iptables
     - supervisor
+    - letsencrypt
   'roles:mediastreamer':
     - match: grain
     - ffmpeg

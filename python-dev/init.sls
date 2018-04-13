@@ -6,7 +6,7 @@ ipython-dependencies:
   pkg.latest:
     - names:
       - libfreetype6-dev
-      - libpng-dev
+      - libpng12-dev
       - libblas-dev
       - liblapack-dev
       - gfortran
@@ -16,7 +16,6 @@ ipython-dependencies:
       - libpq-dev
       - libhdf5-dev
       - python2.7
-      - python3.4
       - python3.5
       - libhdf5-dev
       - hdf5-tools
