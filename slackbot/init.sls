@@ -59,7 +59,7 @@ slackbot-supervisord-conf:
     - user: root
     - group: root
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 slackbot-supervisord:
   supervisord.running:
@@ -69,7 +69,7 @@ slackbot-supervisord:
     - conf_file: /etc/supervisor/supervisord.conf
     - bin_env: /usr/local/bin/supervisorctl
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: slackbot-supervisord-conf
       - user: slackbot
     - watch:

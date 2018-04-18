@@ -10,7 +10,7 @@ garfield:
       - group: garfield 
       - pkg: nginx
       - pkg: postgres
-      - pip: supervisor
+      - pkg: supervisor
       - pkg: rabbitmq
   git.latest:
     - name: git://github.com/RobSpectre/garfield
@@ -62,9 +62,9 @@ garfield-app-conf:
     - require:
       - git: garfield 
 
-garfield-nginx-conf:
+hostname-nginx-conf:
   file.managed:
-    - name: /etc/nginx/sites-available/garfield
+    - name: /etc/nginx/sites-available/{{ grains['fqdn'] }}
     - source: salt://garfield/nginx.conf
     - mode: 644
     - user: root
@@ -75,6 +75,20 @@ garfield-nginx-conf:
     - require:
       - pkg: nginx
       - cmd: letsencrypt-{{ grains['fqdn'] }}
+
+garfield-nginx-conf:
+  file.managed:
+    - name: /etc/nginx/sites-available/garfield
+    - source: salt://garfield/nginx.conf
+    - mode: 644
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      fqdn: garfield.humantrafficking.tips 
+    - require:
+      - pkg: nginx
+      - cmd: letsencrypt-garfield.humantrafficking.tips
 
 garfield-app-directory:
   file.directory:
@@ -101,6 +115,10 @@ garfield-gunicorn-log:
     - mode: 755 
     - user: garfield 
     - group: garfield 
+    - recurse:
+      - user
+      - group
+      - mode
     - require:
       - git: garfield 
 
@@ -153,7 +171,7 @@ garfield-supervisord-config:
     - user: root
     - group: root
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 garfield-supervisord:
   supervisord.running:
@@ -162,7 +180,7 @@ garfield-supervisord:
     - restart: True
     - conf_file: /etc/supervisor/supervisord.conf
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: garfield-supervisord-config
       - git: garfield 
       - virtualenv: garfield 
@@ -171,7 +189,7 @@ garfield-supervisord:
       - file: garfield-gunicorn-conf
       - postgres_database: garfield-postgres-database
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - git: garfield 
       - file: garfield-supervisord-config
       - file: garfield-app-conf
@@ -183,7 +201,7 @@ celery-supervisord:
     - restart: True
     - config_file: /etc/supervisor/supervisord.conf
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: garfield-supervisord-config
       - git: garfield 
       - virtualenv: garfield 
@@ -193,7 +211,7 @@ celery-supervisord:
       - file: garfield-gunicorn-conf
       - postgres_database: garfield-postgres-database
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - git: garfield 
       - file: garfield-supervisord-config
       - file: garfield-app-conf
@@ -258,6 +276,20 @@ garfield-live:
       - pip: garfield-psycopg2
       - pip: garfield-gunicorn
       - file: garfield-app-conf
+      - cmd: letsencrypt-garfield.humantrafficking.tips
+
+hostname-live:
+  file.symlink:
+    - name: /etc/nginx/sites-enabled/{{ grains['fqdn'] }}
+    - target: /etc/nginx/sites-available/{{ grains['fqdn'] }}
+    - require:
+      - service: postgres
+      - supervisord: garfield-supervisord
+      - git: garfield 
+      - pip: garfield-psycopg2
+      - pip: garfield-gunicorn
+      - file: garfield-app-conf
+      - cmd: letsencrypt-{{ grains['fqdn'] }}
 
 letsencrypt-{{ grains['fqdn'] }}:
   cmd.run:
@@ -266,8 +298,6 @@ letsencrypt-{{ grains['fqdn'] }}:
     - creates: /etc/letsencrypt/live/{{ grains['fqdn'] }}/fullchain.pem
     - require:
       - pip: letsencrypt
-    - require_in:
-      - pkg: nginx
 
 renew-cert-for-{{ grains['fqdn'] }}:
   cron.present:
@@ -279,3 +309,23 @@ renew-cert-for-{{ grains['fqdn'] }}:
     - minute: 0
     - require:
       - cmd: letsencrypt-{{ grains['fqdn'] }}
+
+letsencrypt-garfield.humantrafficking.tips:
+  cmd.run:
+    - name: >
+             /opt/letsencrypt/bin/letsencrypt certonly --renew-by-default --standalone -d garfield.humantrafficking.tips --non-interactive --agree-tos -m {{ pillar['email']['user'] }}
+    - creates: /etc/letsencrypt/live/garfield.humantrafficking.tips/fullchain.pem
+    - require:
+      - pip: letsencrypt
+      - cmd: letsencrypt-{{ grains['fqdn'] }}
+
+renew-cert-for-garfield.humantrafficking.tips:
+  cron.present:
+    - name: >
+         /opt/letsencrypt/bin/letsencrypt certonly --webroot -w /opt/garfield/static -d garfield.humantrafficking.tips --non-interactive --agree-tos -m {{ pillar['email']['user'] }} 
+    - identifier: renew-cert-for-garfield.humantrafficking.tips
+    - daymonth: 1
+    - hour: 10
+    - minute: 0
+    - require:
+      - cmd: letsencrypt-garfield.humantrafficking.tips

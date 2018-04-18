@@ -10,7 +10,7 @@ humantrafficking:
       - group: humantrafficking 
       - pkg: nginx
       - pkg: postgres
-      - pip: supervisor
+      - pkg: supervisor
       - pkg: rabbitmq
   git.latest:
     - name: git://github.com/RobSpectre/humantrafficking.tips
@@ -168,7 +168,7 @@ humantrafficking-supervisord-config:
     - user: root
     - group: root
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 humantrafficking-supervisord:
   supervisord.running:
@@ -177,7 +177,7 @@ humantrafficking-supervisord:
     - restart: True
     - conf_file: /etc/supervisor/supervisord.conf
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: humantrafficking-supervisord-config
       - git: humantrafficking 
       - virtualenv: humantrafficking 
@@ -185,7 +185,7 @@ humantrafficking-supervisord:
       - file: humantrafficking-app-conf
       - file: gunicorn-conf
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - git: humantrafficking 
       - file: humantrafficking-supervisord-config
       - file: humantrafficking-app-conf

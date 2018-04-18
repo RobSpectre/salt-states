@@ -18,7 +18,7 @@ votr-supervisord-conf:
     - user: root
     - group: root
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 votr-supervisord:
   supervisord.running:
@@ -28,13 +28,13 @@ votr-supervisord:
     - conf_file: /etc/supervisor/supervisord.conf
     - bin_env: /usr/local/bin/supervisorctl
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: votr-supervisord-conf
       - archive: votr-zip
       - user: votr
       - cmd: votr-initialize-db
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - file: votr-supervisord-conf 
       - file: votr-conf
 
@@ -68,7 +68,7 @@ votr-conf:
       username: {{ pillar['votr']['derp_username'] }}
       password: {{ pillar['votr']['derp_password'] }}
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 votr-nginx:
   file.managed:

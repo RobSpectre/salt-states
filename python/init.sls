@@ -41,15 +41,14 @@ packages:
 #    - watch:
 #      - cmd: Check pip version
 
-lock-pip:
+pip-lock:
   pip.installed:
-    - name: pip == 8.1.1
+    - name: pip == 9.0.3
     - require:
       - pkg: python-pip
 
 virtualenv:
   pip.installed:
-    - upgrade: True
     - require:
       - pkg: python-pip
 

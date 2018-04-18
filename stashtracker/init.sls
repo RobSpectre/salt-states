@@ -23,7 +23,7 @@ stashtracker-supervisord-conf:
       auth_token: {{ pillar['stashtracker']['auth_token'] }}
       caller_id: {{ pillar['stashtracker']['caller_id'] }}
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 stashtracker-supervisord:
   supervisord.running:
@@ -33,11 +33,11 @@ stashtracker-supervisord:
     - conf_file: /etc/supervisor/supervisord.conf
     - bin_env: /usr/local/bin/supervisorctl
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: stashtracker-supervisord-conf
       - user: stashtracker
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - file: stashtracker-supervisord-conf 
 
 stashtracker-code:

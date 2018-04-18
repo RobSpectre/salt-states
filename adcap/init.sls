@@ -20,7 +20,7 @@ adcap:
       - pkg: postgres
       - pkg: redis
       - pkg: elasticsearch
-      - pip: supervisor
+      - pkg: supervisor
       - pkg: adcap-deps
   git.latest:
     - name: git://github.com/AdventureCapitalists/website
@@ -184,7 +184,7 @@ adcap-supervisord-config:
     - user: root
     - group: root
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 adcap-supervisord:
   supervisord.running:
@@ -193,7 +193,7 @@ adcap-supervisord:
     - restart: True
     - conf_file: /etc/supervisor/supervisord.conf
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: adcap-supervisord-config
       - git: adcap
       - virtualenv: adcap
@@ -202,7 +202,7 @@ adcap-supervisord:
       - service: redis
       - file: adcap-app-conf
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - git: adcap
       - file: adcap-supervisord-config
       - file: adcap-app-conf

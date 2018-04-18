@@ -11,7 +11,7 @@ childsafe:
       - group: childsafe
       - pkg: nginx
       - pkg: postgres
-      - pip: supervisor
+      - pkg: supervisor
       - pkg: rabbitmq
   git.latest:
     - name: git://github.com/RobSpectre/childsafe.io
@@ -173,7 +173,7 @@ childsafe-supervisord-config:
     - user: root
     - group: root
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 childsafe-supervisord:
   supervisord.running:
@@ -182,7 +182,7 @@ childsafe-supervisord:
     - restart: True
     - conf_file: /etc/supervisor/supervisord.conf
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: childsafe-supervisord-config
       - git: childsafe 
       - virtualenv: childsafe 
@@ -190,7 +190,7 @@ childsafe-supervisord:
       - file: childsafe-app-conf
       - file: childsafe-gunicorn-conf
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - git: childsafe 
       - file: childsafe-supervisord-config
       - file: childsafe-app-conf
@@ -202,7 +202,7 @@ childsafe-celery-supervisord:
     - restart: True
     - conf_file: /etc/supervisor/supervisord.conf
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: childsafe-supervisord-config
       - git: childsafe 
       - virtualenv: childsafe 
@@ -210,7 +210,7 @@ childsafe-celery-supervisord:
       - file: childsafe-app-conf
       - file: childsafe-gunicorn-conf
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - git: childsafe 
       - file: childsafe-supervisord-config
       - file: childsafe-app-conf

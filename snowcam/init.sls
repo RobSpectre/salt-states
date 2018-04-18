@@ -26,7 +26,7 @@
       server_name: {{ pillar['snowcam']['server_name'] }}
     - context:
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 /home/{{ pillar['snowcam']['user'] }}/{{ pillar['snowcam']['server_name'] }}/hls:
     file.directory:
@@ -50,11 +50,11 @@ snowcam-hls:
     - conf_file: /etc/supervisor/supervisord.conf
     - bin_env: /usr/local/bin/supervisorctl
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: {{ pillar['snowcam']['user'] }}-hls-supervisord-conf
       - file: ffmpeg-stream-preset 
     - watch:
-      - pip: supervisor
+      - pkg: supervisor
       - file: {{ pillar['snowcam']['user'] }}-hls-supervisord-conf 
 
 ffmpeg-stream-preset:

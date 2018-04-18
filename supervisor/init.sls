@@ -1,14 +1,6 @@
 {% if pillar.get('supervisor', None) %}
-
-supervisor-deps:
-  pip.installed:
-    - upgrade: True
-    - names:
-      - meld3
-      - setuptools
-
 supervisor:
-  pip.installed:
+  pkg.latest:
     - require:
       - pip: virtualenv
 
@@ -20,7 +12,7 @@ supervisord:
       - file: /etc/supervisor/supervisord.conf
       - file: /etc/supervisor/conf.d/*
     - require:
-      - pip: supervisor
+      - pkg: supervisor
       - file: /etc/init.d/supervisord
 
 /etc/supervisor:
@@ -30,7 +22,7 @@ supervisord:
     - group: root
     - makedirs: True
     - require:
-      - pip: supervisor
+      - pkg: supervisor
 
 /etc/supervisor/supervisord.conf:
   file.managed:
