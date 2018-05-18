@@ -140,9 +140,6 @@ garfield-postgres-database:
     - name: {{ pillar['database']['user']['name'] }}
     - owner: {{ pillar['database']['user']['name'] }}
     - encoding: UTF8
-    - lc_ctype: en_US.UTF8
-    - lc_collate: en_US.UTF8
-    - template: template0
     - require:
       - service: postgres
       - postgres_user: garfield-postgres-user
@@ -150,7 +147,6 @@ garfield-postgres-database:
 garfield-gunicorn:
   pip.installed:
     - name: gunicorn
-    - upgrade: True
     - bin_env: /opt/garfield/venv
     - require:
       - virtualenv: garfield 

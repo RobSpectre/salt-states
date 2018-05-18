@@ -87,3 +87,6 @@ TWILIO_PHONE_NUMBER = "+{{ twilio.phone_number }}"
 TWILIO_APP_SID = "{{ twilio.app_sid }}"
 TELLFINDER_API_KEY = "{{ tellfinder.api_key }}"
 {% endif %}
+
+GARFIELD_NUMBER_OF_DETERRENTS = 3
+GARFIELD_DETERRENT_INTERVAL = 172800
