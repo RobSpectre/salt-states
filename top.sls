@@ -53,7 +53,6 @@ base:
     - audacity
     - openshot
     - heroku
-    - synergy
     - gimp
     - ffmpeg
     - vlc

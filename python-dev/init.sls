@@ -1,12 +1,12 @@
 deadsnakes-ppa:
   pkgrepo.managed:
-    - ppa: fkrull/deadsnakes
+    - ppa: deadsnakes/ppa 
 
 ipython-dependencies:
   pkg.latest:
     - names:
       - libfreetype6-dev
-      - libpng12-dev
+      - libpng-dev
       - libblas-dev
       - liblapack-dev
       - gfortran
@@ -26,6 +26,8 @@ ipython-dependencies:
       - libssl-dev
       {% if grains['lsb_distrib_codename'] == 'xenial' %} 
       - libhdf5-10
+      {% elif grains['lsb_distrib_codename'] == 'bionic' %}
+      - libhdf5-100
       {% else %}
       - libhdf5-7
       {% endif %}
