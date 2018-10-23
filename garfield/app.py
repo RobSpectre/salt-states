@@ -88,5 +88,10 @@ TWILIO_APP_SID = "{{ twilio.app_sid }}"
 TELLFINDER_API_KEY = "{{ tellfinder.api_key }}"
 {% endif %}
 
-GARFIELD_NUMBER_OF_DETERRENTS = 3
-GARFIELD_DETERRENT_INTERVAL = 172800
+ARBUCKLE_DIR = "{{ garfield.arbuckle_dir }}"
+
+{% if garfield %}
+GARFIELD_NUMBER_OF_DETERRENTS = {{ garfield.garfield_number_of_deterrents }} 
+GARFIELD_DETERRENT_INTERVAL = {{ garfield.garfield_deterrent_interval }}
+GARFIELD_JURISDICTION = "{{ garfield.garfield_jurisdiction }}"
+{% endif %}

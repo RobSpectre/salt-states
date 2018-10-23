@@ -26,9 +26,63 @@ garfield:
     - system_site_packages: False
     - python: python3.5 
     - requirements: /opt/garfield/requirements.txt
+    - no_chace_dir: True
     - user: garfield 
     - require:
       - git: garfield 
+
+arbuckle-key-dir:
+  file.directory:
+    - name: /opt/.ssh
+    - mode: 700 
+    - user: garfield 
+    - group: garfield 
+    - require:
+      - user: garfield 
+
+arbuckle-public-key:
+  file.managed:
+    - name: /opt/.ssh/id_rsa.pub
+    - contents_pillar: ssh_keys:public
+    - mode: 700 
+    - user: garfield 
+    - group: garfield 
+    - require:
+      - user: garfield 
+      - file: arbuckle-key-dir
+
+arbuckle-private-key:
+  file.managed:
+    - name: /opt/.ssh/id_rsa
+    - contents_pillar: ssh_keys:private
+    - mode: 700 
+    - user: garfield 
+    - group: garfield 
+    - require:
+      - user: garfield 
+      - file: arbuckle-key-dir
+
+arbuckle-app-directory:
+  file.directory:
+    - name: /opt/arbuckle
+    - mode: 755 
+    - user: garfield 
+    - group: garfield 
+    - require:
+      - user: garfield 
+
+arbuckle:
+  git.latest:
+    - name: git@github.com:RobSpectre/arbuckle.git 
+    - target: /opt/arbuckle
+    - rev: master 
+    - submodules: True
+    - force_checkout: True
+    - identity: /opt/.ssh/id_rsa
+    - user: garfield 
+    - require:
+      - file: arbuckle-app-directory
+
 
 garfield-app-conf:
   file.managed:
@@ -52,13 +106,20 @@ garfield-app-conf:
       email_user: {{ pillar['email']['user'] }}
       email_host: {{ pillar['email']['host'] }}
       email_password: {{ pillar['email']['password'] }}
+      {% if grains.get('garfield', None) %}
       twilio:
-        account_sid: {{ pillar['twilio']['account_sid'] }}
-        auth_token: {{ pillar['twilio']['auth_token'] }}
-        phone_number: {{ pillar['twilio']['phone_number'] }}
-        app_sid: {{ pillar['twilio']['app_sid'] }}
+        account_sid: {{ grains['garfield']['twilio_account_sid'] }}
+        auth_token: {{ grains['garfield']['twilio_auth_token'] }}
+        phone_number: {{ grains['garfield']['twilio_phone_number'] }}
+        app_sid: {{ grains['garfield']['twilio_app_sid'] }}
       tellfinder:
         api_key: {{ pillar['tellfinder']['api_key'] }}
+      garfield:
+        garfield_number_of_deterrents: {{ grains['garfield']['garfield_number_of_deterrents'] }}
+        garfield_deterrent_interval: {{ grains['garfield']['garfield_deterrent_interval'] }}
+        arbuckle_dir: "/opt/arbuckle"
+        garfield_jurisdiction: {{ grains['garfield']['garfield_jurisdiction'] }}
+      {% endif %}
     - require:
       - git: garfield 
 
@@ -75,20 +136,6 @@ hostname-nginx-conf:
     - require:
       - pkg: nginx
       - cmd: letsencrypt-{{ grains['fqdn'] }}
-
-garfield-nginx-conf:
-  file.managed:
-    - name: /etc/nginx/sites-available/garfield
-    - source: salt://garfield/nginx.conf
-    - mode: 644
-    - user: root
-    - group: root
-    - template: jinja
-    - context:
-      fqdn: garfield.humantrafficking.tips 
-    - require:
-      - pkg: nginx
-      - cmd: letsencrypt-garfield.humantrafficking.tips
 
 garfield-app-directory:
   file.directory:
@@ -146,7 +193,7 @@ garfield-postgres-database:
 
 garfield-gunicorn:
   pip.installed:
-    - name: gunicorn
+    - name: gunicorn==19.7.1
     - bin_env: /opt/garfield/venv
     - require:
       - virtualenv: garfield 
@@ -168,6 +215,11 @@ garfield-supervisord-config:
     - group: root
     - require:
       - pkg: supervisor
+      - pip: garfield-flower
+    - template: jinja
+    - context:
+      user: {{ pillar['flower']['user']['name'] }}
+      password: {{ pillar['flower']['user']['password'] }}
 
 garfield-supervisord:
   supervisord.running:
@@ -184,6 +236,7 @@ garfield-supervisord:
       - file: garfield-app-conf
       - file: garfield-gunicorn-conf
       - postgres_database: garfield-postgres-database
+      - cmd: garfield-migrate
     - watch:
       - pkg: supervisor
       - git: garfield 
@@ -261,19 +314,6 @@ garfield-collectstatic:
     - watch:
       - git: garfield 
 
-garfield-live:
-  file.symlink:
-    - name: /etc/nginx/sites-enabled/garfield
-    - target: /etc/nginx/sites-available/garfield
-    - require:
-      - service: postgres
-      - supervisord: garfield-supervisord
-      - git: garfield 
-      - pip: garfield-psycopg2
-      - pip: garfield-gunicorn
-      - file: garfield-app-conf
-      - cmd: letsencrypt-garfield.humantrafficking.tips
-
 hostname-live:
   file.symlink:
     - name: /etc/nginx/sites-enabled/{{ grains['fqdn'] }}
@@ -290,7 +330,7 @@ hostname-live:
 letsencrypt-{{ grains['fqdn'] }}:
   cmd.run:
     - name: >
-             /opt/letsencrypt/bin/letsencrypt certonly --renew-by-default --standalone -d {{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }}
+             /opt/letsencrypt/bin/letsencrypt certonly --standalone -d {{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }}
     - creates: /etc/letsencrypt/live/{{ grains['fqdn'] }}/fullchain.pem
     - require:
       - pip: letsencrypt
@@ -298,30 +338,60 @@ letsencrypt-{{ grains['fqdn'] }}:
 renew-cert-for-{{ grains['fqdn'] }}:
   cron.present:
     - name: >
-         /opt/letsencrypt/bin/letsencrypt certonly --webroot -w /opt/garfield/static -d {{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }} 
+         /opt/letsencrypt/bin/letsencrypt renew --nginx --cert-name {{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }} 
     - identifier: renew-cert-for-{{ grains['fqdn'] }}
-    - daymonth: 1
-    - hour: 10
-    - minute: 0
+    - special: '@daily'
     - require:
       - cmd: letsencrypt-{{ grains['fqdn'] }}
 
-letsencrypt-garfield.humantrafficking.tips:
+garfield-flower:
+  pip.installed:
+    - name: flower
+    - upgrade: True
+    - bin_env: /opt/garfield/venv
+    - require:
+      - virtualenv: garfield
+
+flower-nginx-conf:
+  file.managed:
+    - name: /etc/nginx/sites-available/flower.{{ grains['fqdn'] }}
+    - source: salt://garfield/nginx_flower.conf
+    - mode: 644
+    - user: root
+    - group: root
+    - template: jinja
+    - context:
+      fqdn: {{ grains['fqdn'] }}
+    - require:
+      - pkg: nginx
+      - cmd: letsencrypt-flower.{{ grains['fqdn'] }}
+
+flower-nginx-live:
+  file.symlink:
+    - name: /etc/nginx/sites-enabled/flower.{{ grains['fqdn'] }}
+    - target: /etc/nginx/sites-available/flower.{{ grains['fqdn'] }}
+    - require:
+      - service: postgres
+      - supervisord: garfield-supervisord
+      - git: garfield 
+      - pip: garfield-psycopg2
+      - pip: garfield-gunicorn
+      - file: garfield-app-conf
+      - cmd: letsencrypt-flower.{{ grains['fqdn'] }}
+
+letsencrypt-flower.{{ grains['fqdn'] }}:
   cmd.run:
     - name: >
-             /opt/letsencrypt/bin/letsencrypt certonly --renew-by-default --standalone -d garfield.humantrafficking.tips --non-interactive --agree-tos -m {{ pillar['email']['user'] }}
-    - creates: /etc/letsencrypt/live/garfield.humantrafficking.tips/fullchain.pem
+             /opt/letsencrypt/bin/letsencrypt certonly --standalone -d flower.{{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }}
+    - creates: /etc/letsencrypt/live/flower.{{ grains['fqdn'] }}/fullchain.pem
     - require:
       - pip: letsencrypt
-      - cmd: letsencrypt-{{ grains['fqdn'] }}
 
-renew-cert-for-garfield.humantrafficking.tips:
+renew-cert-for-flower.{{ grains['fqdn'] }}:
   cron.present:
     - name: >
-         /opt/letsencrypt/bin/letsencrypt certonly --webroot -w /opt/garfield/static -d garfield.humantrafficking.tips --non-interactive --agree-tos -m {{ pillar['email']['user'] }} 
-    - identifier: renew-cert-for-garfield.humantrafficking.tips
-    - daymonth: 1
-    - hour: 10
-    - minute: 0
+         /opt/letsencrypt/bin/letsencrypt renew --nginx --cert-name flower.{{ grains['fqdn'] }} --non-interactive --agree-tos -m {{ pillar['email']['user'] }} 
+    - identifier: renew-cert-for-flower.{{ grains['fqdn'] }}
+    - special: '@daily'
     - require:
-      - cmd: letsencrypt-garfield.humantrafficking.tips
+      - cmd: letsencrypt-flower.{{ grains['fqdn'] }}

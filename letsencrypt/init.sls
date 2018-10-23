@@ -7,3 +7,9 @@ letsencrypt:
     - bin_env: /opt/letsencrypt
     - require:
       - virtualenv: letsencrypt
+
+letsencrypt-nginx:
+  pip.installed:
+    - bin_env: /opt/letsencrypt
+    - require:
+      - virtualenv: letsencrypt
