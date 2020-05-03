@@ -35,6 +35,7 @@ Bundle 'rails.vim'
 Bundle 'Markdown'
 Bundle 'JSON.vim'
 Bundle 'vim-coffee-script'
+Plugin 'psf/black'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...

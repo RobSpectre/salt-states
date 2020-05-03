@@ -395,3 +395,11 @@ renew-cert-for-flower.{{ grains['fqdn'] }}:
     - special: '@daily'
     - require:
       - cmd: letsencrypt-flower.{{ grains['fqdn'] }}
+
+restart-garfield-app:
+  cron.present:
+    - name: supervisorctl restart gunicorn_garfield
+    - identifier: restart-garfield-app
+    - special: '@daily'
+    - require:
+      - supervisord: garfield-supervisord 

@@ -3,7 +3,7 @@ ngrok:
     - archive_format: zip
     - name: /usr/local/bin/
     - source: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
-    - source_hash: md5=8affd156889004688f78c176bf1878a2
+    - source_hash: md5=a9aed972a34bdec5968398077e27b540
     - if_missing: /usr/local/bin/ngrok 
     - enforce_toplevel: False
 

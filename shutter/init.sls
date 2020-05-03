@@ -1,2 +1,2 @@
-shutter:
+flameshot:
   pkg.latest

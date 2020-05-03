@@ -1,22 +1,31 @@
+{% if grains['lsb_distrib_codename'] != 'disco' %}
 deadsnakes-ppa:
   pkgrepo.managed:
     - ppa: deadsnakes/ppa 
+{% endif %}
 
 ipython-dependencies:
   pkg.latest:
     - names:
       - libfreetype6-dev
+      {% if grains['lsb_distrib_codename'] == 'disco' %}
       - libpng-dev
+      {% elif grains['lsb_distrib_codename'] == 'bionic' %}
+      - libpng-dev
+      {% else %}
+      - libpng12-dev
+      {% endif %}
       - libblas-dev
       - liblapack-dev
       - gfortran
-      - python-dev
+      - python3.7-dev
       - g++
       - postgresql-client
       - libpq-dev
       - libhdf5-dev
       - python2.7
-      - python3.5
+      - python3.7
+      - python3.8
       - libhdf5-dev
       - hdf5-tools
       - hdf5-helpers
@@ -24,15 +33,20 @@ ipython-dependencies:
       - libffi6
       - libffi-dev
       - libssl-dev
+      - libfreetype6-dev
       {% if grains['lsb_distrib_codename'] == 'xenial' %} 
       - libhdf5-10
       {% elif grains['lsb_distrib_codename'] == 'bionic' %}
       - libhdf5-100
+      {% elif grains['lsb_distrib_codename'] == 'disco' %}
+      - libhdf5-103
       {% else %}
       - libhdf5-7
       {% endif %}
+    {% if grains['lsb_distrib_codename'] != 'disco' %}
     - require:
       - pkgrepo: deadsnakes-ppa
+    {% endif %}
 
 
 {% for user in pillar.get('users', []) %}
@@ -47,7 +61,7 @@ ipython-dependencies:
     - requirements: salt://python-dev/flask.txt
     - user: {{ user.username }}
     - require:
-      - pkgrepo: deadsnakes-ppa
+      - pkg: ipython-dependencies 
       - file: /home/{{ user.username }}/.virtualenvs
 
 /home/{{ user.username }}/.virtualenvs/authy:
@@ -56,7 +70,7 @@ ipython-dependencies:
     - requirements: salt://python-dev/authy.txt
     - user: {{ user.username }}
     - require:
-      - pkgrepo: deadsnakes-ppa
+      - pkg: ipython-dependencies 
       - file: /home/{{ user.username }}/.virtualenvs
 
 /home/{{ user.username }}/.virtualenvs/django:
@@ -65,7 +79,7 @@ ipython-dependencies:
     - requirements: salt://python-dev/django.txt
     - user: {{ user.username }}
     - require:
-      - pkgrepo: deadsnakes-ppa
+      - pkg: ipython-dependencies 
       - file: /home/{{ user.username }}/.virtualenvs
 
 /home/{{ user.username }}/.virtualenvs/djangorestframework:
@@ -74,7 +88,7 @@ ipython-dependencies:
     - requirements: salt://python-dev/djangorestframework.txt
     - user: {{ user.username }}
     - require:
-      - pkgrepo: deadsnakes-ppa
+      - pkg: ipython-dependencies 
       - file: /home/{{ user.username }}/.virtualenvs
 
 /home/{{ user.username }}/.virtualenvs/nlp:
@@ -83,17 +97,15 @@ ipython-dependencies:
     - requirements: salt://python-dev/nlp.txt
     - user: {{ user.username }}
     - require:
-      - pkgrepo: deadsnakes-ppa
       - file: /home/{{ user.username }}/.virtualenvs
 
 /home/{{ user.username }}/.virtualenvs/ipython:
   virtualenv.managed:
     - system_site_packages: False
-    - python: /usr/bin/python2.7
+    - python: /usr/bin/python3.7
     - user: {{ user.username }}
     - requirements: salt://python-dev/ipython-deps.txt
     - require:
-      - pkgrepo: deadsnakes-ppa
       - pkg: ipython-dependencies
       - file: /home/{{ user.username }}/.virtualenvs
 
@@ -101,7 +113,7 @@ statsmodel-deps:
   pip.installed:
     - names:
       - numexpr
-      - cython
+      - Cython
     - bin_env: /home/{{ user.username }}/.virtualenvs/ipython
     - user: {{ user.username }}
     - require:

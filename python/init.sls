@@ -1,16 +1,23 @@
 build-essential:
   pkg.latest
 
-python-software-properties:
-  pkg.latest
-
 packages:
   pkg.latest:
     - names:
       - python
       - python-dev
+      - python-venv
+      {% if grains['lsb_distrib_codename'] == 'disco' %}
+      - python3.7
+      - python3.7-dev
+      - python3.7-venv
+      - python3-pip
+      {% else %}
       - python3.5
       - python3.5-dev
+      - python3.7-venv
+      - python3-pip
+      {% endif %}
       - python-pip
       - python-pycurl
     - require:
@@ -41,14 +48,15 @@ packages:
 #    - watch:
 #      - cmd: Check pip version
 
-pip-lock:
+pip:
   pip.installed:
-    - name: pip == 9.0.3
+    - upgrade: True
     - require:
       - pkg: python-pip
 
 virtualenv:
   pip.installed:
+    - name: virtualenv == 16.7.9
     - require:
       - pkg: python-pip
 
