@@ -24,7 +24,7 @@ garfield:
   virtualenv.managed:
     - name: /opt/garfield/venv
     - system_site_packages: False
-    - python: python3.5 
+    - python: python3.8 
     - requirements: /opt/garfield/requirements.txt
     - no_chace_dir: True
     - user: garfield 
